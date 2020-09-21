@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, Windows 10, Docker, contêineres
 ms.date: 08/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a972cd6f179059e0841e1aef4bc3929fa46fcc4d
-ms.sourcegitcommit: 1c7f2e9928672ad3941a9327162595cb73ef5a3f
+ms.openlocfilehash: 2ae9da815335f99a9b4a75334a02d2730ddd08c6
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609625"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818748"
 ---
 # <a name="get-started-with-docker-remote-containers-on-wsl-2"></a>Introdução aos contêineres remotos do Docker no WSL 2
 
@@ -127,7 +127,7 @@ Vamos usar o Docker para criar um contêiner de desenvolvimento para um projeto 
 
     ![VS Code executar a configuração de depuração](../media/vscode-run-config.png)
 
-10. De dentro vs Code, selecione **executar**  >  **Iniciar Depuração** (ou apenas pressione a tecla **F5** ). Isso abrirá um terminal dentro de VS Code e você verá um resultado que diz algo como: "Iniciando o servidor de desenvolvimento em http://127.0.0.1:8000/ sair do servidor com Control-C". Mantenha a tecla Control pressionada e selecione o endereço exibido para abrir seu aplicativo no navegador da Web padrão e veja seu projeto em execução dentro dele.
+10. De dentro vs Code, selecione **executar**  >  **Iniciar Depuração** (ou apenas pressione a tecla **F5** ). Isso abrirá um terminal dentro de VS Code e você verá um resultado que diz algo como: "Iniciando o servidor de desenvolvimento em http://127.0.0.1:8000/ sair do servidor com Control-C". Mantenha a tecla Control pressionada e selecione o endereço exibido para abrir seu aplicativo no navegador da Web padrão e veja seu projeto em execução dentro de seu contêiner.
 
     ![VS Code executando um contêiner do Docker](../media/vscode-running-in-container.png)
 

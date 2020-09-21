@@ -4,12 +4,12 @@ description: Listagem de referência e configuração de várias distribuições
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: b8aa740233f3ac9517744212eb7b362a18378822
-ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
+ms.openlocfilehash: 0a127d376a8606a1a13ea88c9efed161e18a161d
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88039409"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818728"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>Comandos do WSL e configurações de inicialização
 
@@ -125,9 +125,9 @@ Cada distribuição do Linux gerencia de forma independente suas próprias confi
 `wsl -l` , `wsl --list`  
 Lista as distribuições do Linux disponíveis para WSL.  Se uma distribuição estiver listada, ela será instalada e estará pronta para uso.
 
-`wsl --list --all`Lista todas as distribuições, incluindo aquelas que não são utilizáveis no momento.  Elas podem estar no processo de instalação, desinstalação ou em um estado desfeito.  
+`wsl --list --all` Lista todas as distribuições, incluindo aquelas que não são utilizáveis no momento.  Elas podem estar no processo de instalação, desinstalação ou em um estado desfeito.  
 
-`wsl --list --running`Lista todas as distribuições que estão em execução no momento.
+`wsl --list --running` Lista todas as distribuições que estão em execução no momento.
 
 ## <a name="set-a-default-distribution"></a>Definir uma distribuição padrão
 
@@ -208,7 +208,7 @@ Lista todas as distribuições, incluindo aquelas que não são utilizáveis no 
 
 Para definir uma distribuição padrão que é executada quando você executa `wsl` em uma linha de comando:
 
-`wslconfig /setdefault <DistributionName>`Define a distribuição padrão como `<DistributionName>` .
+`wslconfig /setdefault <DistributionName>` Define a distribuição padrão como `<DistributionName>` .
 
 **Exemplo: (usando o PowerShell)**  
 `wslconfig /setdefault Ubuntu` definiria minha distribuição padrão como Ubuntu.  Agora, quando eu executar o `wsl npm init`, ele será executado no Ubuntu.  Se eu executar `wsl`, ele abrirá uma sessão do Ubuntu.
@@ -260,7 +260,7 @@ Seção: `[automount]`
 
 | key        | value                          | default      | observações                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| habilitado    | booliano                        | verdadeiro         | `true` causa unidades fixas (ou seja, `C:/` ou `D:/`) a ser montado automaticamente com DrvFs em `/mnt`.  `false`significa que as unidades não serão montadas automaticamente, mas você ainda poderá montá-las manualmente ou por meio do `fstab` .                                                                                                             |
+| habilitado    | booliano                        | verdadeiro         | `true` causa unidades fixas (ou seja, `C:/` ou `D:/`) a ser montado automaticamente com DrvFs em `/mnt`.  `false` significa que as unidades não serão montadas automaticamente, mas você ainda poderá montá-las manualmente ou por meio do `fstab` .                                                                                                             |
 | mountFsTab | booliano                        | verdadeiro         | O `true` define o `/etc/fstab` para ser processado no início do WSL. /etc/fstab é um arquivo no qual você pode declarar outros sistemas de arquivos, como um compartilhamento SMB. Assim, você pode montar esses sistemas de arquivos automaticamente no WSL na inicialização.                                                                                                                |
 | raiz       | Cadeia de caracteres                         | `/mnt/`      | Define o diretório em que as unidades fixas serão montadas automaticamente. Por exemplo, se tiver um diretório no WSL no `/windir/` e especificá-lo como a raiz, você poderá esperar ver suas unidades fixas montadas em `/windir/c`                                                                                              |
 | opções    | lista de valores separados por vírgulas | cadeia de caracteres vazia | Esse valor é acrescentado à cadeia de caracteres de opções padrão de montagem DrvFs. **Somente opções específicas do DrvFs podem ser especificadas.** As opções que o binário de montagem normalmente analisa em um sinalizador não são compatíveis. Se você quiser especificar explicitamente essas opções, deverá incluir todas as unidades para as quais deseja fazer isso em /etc/fstab. |
@@ -339,15 +339,15 @@ Essas configurações afetam a VM que alimenta qualquer distribuição WSL 2.
 | chave | value | default | HDInsight|
 |:----|:----|:----|:----|
 | kernel | string | A caixa de entrada fornecida pelo kernel criado pela Microsoft | Um caminho absoluto do Windows para um kernel personalizado do Linux. |
-| memória | tamanho | 80% da memória total no Windows * | A quantidade de memória a ser atribuída à VM WSL 2. |
+| memória | tamanho | 50% da memória total no Windows ou 8 GB, o que for menor; em builds antes de 20175:80% da memória total no Windows | A quantidade de memória a ser atribuída à VM WSL 2. |
 | processadores | número | O mesmo número de processadores no Windows | Quantos processadores atribuir à VM WSL 2. |
 | localhostForwarding | booleano | `true` | Booliano especificando se as portas vinculadas ao curinga ou localhost na VM WSL 2 devem ser conectadas do host via localhost: Port. |
-| kernelCommandLine | string | Em Branco | Argumentos de linha de comando de kernel adicionais. |
+| kernelCommandLine | string | Em branco | Argumentos de linha de comando de kernel adicionais. |
 | swap | tamanho | 25% do tamanho da memória no Windows arredondado para os GB mais próximos | Quanto espaço de permuta adicionar à VM WSL 2, 0 para nenhum arquivo de permuta. |
 | Permuta | string | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | Um caminho absoluto do Windows para o disco rígido virtual de permuta. |
 
 * Observação: esse valor é verdadeiro para a compilação 19041 do Windows e pode ser diferente no Windows Builds no programa pessoas internas
 
-As entradas com o `path` valor devem ser caminhos do Windows com barras invertidas de escape, por exemplo:`C:\\Temp\\myCustomKernel`
+As entradas com o `path` valor devem ser caminhos do Windows com barras invertidas de escape, por exemplo: `C:\\Temp\\myCustomKernel`
 
 As entradas com o `size` valor devem ser um tamanho seguido por uma unidade, por exemplo, `8GB` ou `512MB` .

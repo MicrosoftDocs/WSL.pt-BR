@@ -3,29 +3,33 @@ title: Uma visão geral do Subsistema do Windows para Linux
 description: Explore a documentação do Subsistema do Windows para Linux.
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux
 ms.topic: article
+ms.date: 09/15/2020
 ms.localizationpriority: high
-ms.openlocfilehash: 81ff05f03172e3e3a167ffba4ce846ec2edb3d1c
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: e8046e4ec95e599014c5e5c09a24e7fac44da43d
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948580"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719155"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Documentação do Subsistema Windows para Linux
 
-O Subsistema do Windows para Linux permite que os desenvolvedores executem um ambiente GNU/Linux, incluindo a maioria das ferramentas de linha de comando, utilitários e aplicativos, diretamente no Windows, sem modificações e sem a sobrecarga de uma máquina virtual tradicional ou instalação dualboot.
+O Subsistema do Windows para Linux permite que os desenvolvedores executem um ambiente GNU/Linux, incluindo a maioria das ferramentas de linha de comando, utilitários e aplicativos, diretamente no Windows, sem modificações e sem a sobrecarga de uma máquina virtual tradicional ou instalação de inicialização dupla.
 
-## <a name="learn-more-here"></a>Saiba mais aqui
+> [!div class="nextstepaction"]
+> [Instalar o WSL](install-win10.md)
+
+## <a name="learn-more"></a>Saiba mais
 
 * [O que é o Subsistema do Windows para Linux?](about.md)
-* [Novidades no WSL 2](wsl2-index.md)
+* [Novidades no WSL 2](compare-versions.md#whats-new-in-wsl-2)
 * [Comparar o WSL 2 com o WSL 1](compare-versions.md)
 * [Leia as perguntas frequentes](faq.md)
 
 ## <a name="get-started"></a>Introdução
 
 * [Instalar o WSL1](install-win10.md)
-* [Atualizar para o WSL2](install-win10.md#update-to-wsl-2)
+* [Atualizar para o WSL2](install-win10.md#step-2---update-to-wsl-2)
 * [Instalar o Linux no Windows Server](install-on-server.md)
 * [Criar uma conta de usuário e uma senha para sua nova distribuição do Linux](user-support.md)
 
