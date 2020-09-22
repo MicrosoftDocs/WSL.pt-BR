@@ -6,12 +6,12 @@ ms.date: 07/21/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.localizationpriority: high
-ms.openlocfilehash: c468f501894df9dfde4323471a6d20569ac82e9c
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 2b79473f620c39084bc9b7a385d4e16e3fe34d77
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88865961"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818668"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>O que é o Subsistema do Windows para Linux?
 
@@ -25,7 +25,7 @@ Você pode:
     * Ferramentas: vim, emacs, tmux
     * Linguagens: [Node.js](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2), Javascript, [Python](https://docs.microsoft.com/windows/python/web-frameworks), Ruby, C/C++, C# & F#, Rust, Go etc.
     * Serviços: SSHD, [MySQL](./tutorials/wsl-database.md), Apache, lighttpd, [MongoDB](./tutorials/wsl-database.md), [PostgreSQL](./tutorials/wsl-database.md).
-* Instale o software adicional usando o gerenciador de pacotes de distribuição do GNU/Linux.
+* Instale o software adicional usando o seu próprio gerenciador de pacotes de distribuição do GNU/Linux.
 * Invoque aplicativos do Windows usando um shell de linha de comando do UNIX.
 * Invoque aplicativos do GNU/Linux no Windows.
 
@@ -72,6 +72,6 @@ As distribuições individuais do Linux podem ser executadas com a arquitetura d
 
 * [Comandos do WSL de referência](./reference.md)
 
-* [Criar uma distribuição personalizada](./build-custom-distro.md)
+* [Criar distribuições personalizadas](./build-custom-distro.md)
 
 * [Ler as notas sobre a versão do WSL](./release-notes.md)
