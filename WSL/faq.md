@@ -2,16 +2,16 @@
 title: Perguntas frequentes (FAQ)
 description: Encontre respostas para perguntas frequentes sobre o Subsistema do Windows para Linux, como 'O que posso fazer com o WSL?'.
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, faq
-ms.date: 9/4/2018
+ms.date: 09/15/2020
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 9a9f287ceb2ae93286999ed32d655198c8a390c8
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 0f16471968151fa040d41baa90af6aedfb6fee79
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866154"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719185"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Perguntas frequentes sobre o Subsistema Windows para Linux
 
@@ -181,7 +181,7 @@ O WSL não é compatível com a execução em um console herdado. Para desligar 
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>Por que obtenho "Erro: 0x80040154" quando executo o bash.exe após a atualização do Windows?
 
-O recurso “Subsistema Windows para Linux” pode ser desabilitado durante uma atualização do Windows. Se isso acontecer, o recurso do Windows deverá ser habilitado novamente. As instruções para habilitar o recurso “Subsistema Windows para Linux” podem ser encontradas no [Guia de instalação](https://docs.microsoft.com/windows/wsl/install-win10#install-the-windows-subsystem-for-linux).
+O recurso “Subsistema Windows para Linux” pode ser desabilitado durante uma atualização do Windows. Se isso acontecer, o recurso do Windows deverá ser habilitado novamente. As instruções para habilitar o recurso “Subsistema Windows para Linux” podem ser encontradas no [Guia de instalação](https://docs.microsoft.com/windows/wsl/install-win10).
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>Como alterar o idioma de exibição do WSL?
 

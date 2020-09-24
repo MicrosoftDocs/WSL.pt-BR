@@ -2,15 +2,15 @@
 title: Baixar manualmente as distribuições do WSL (Subsistema do Windows para Linux)
 description: Instruções sobre como baixar manualmente as distribuições do Subsistema do Windows para Linux.
 keywords: wsl, subsistema do Windows para Linux, instalação manual, instalar manualmente, microsoft store, windows 10s, ondulação, Add-AppxPackage, manutenção de longo prazo, LTSC
-ms.date: 05/28/2020
+ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d948ce9d304314bdd15b98136b8a99ca35723139
-ms.sourcegitcommit: e67eb4aedff57a304188ca3360aba25605f8bdb1
+ms.openlocfilehash: 04b991d1019f2187a01189695e4078f4d8a8ba1f
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746272"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719135"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Baixar manualmente os pacotes de distribuição do Subsistema do Windows para Linux
 
@@ -40,7 +40,7 @@ Isso fará com que os pacotes `<distro>.appx` sejam baixados em uma pasta de sua
 Se preferir, você também poderá baixar suas distribuições preferenciais usando a linha de comando:
 
  ### <a name="download-using-powershell"></a>Baixar usando o PowerShell
- Para baixar as distribuições usando o PowerShell, use o cmdlet [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1). Aqui está um exemplo de instrução para baixar o Ubuntu 16.04.
+ Para baixar as distribuições usando o PowerShell, use o cmdlet [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest). Aqui está um exemplo de instrução para baixar o Ubuntu 16.04.
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
@@ -56,7 +56,7 @@ A atualização do Windows 10 Spring 2018 (ou posterior) inclui o popular [utili
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-No exemplo acima, `curl.exe` é executado (não apenas `curl`) para verificar se, no PowerShell, o executável curl real é invocado, não o alias curl do PowerShell para [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)
+No exemplo acima, `curl.exe` é executado (não apenas `curl`) para verificar se, no PowerShell, o executável curl real é invocado, não o alias curl do PowerShell para [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest)
 
 > Observação: usar `curl` poderá ser preferível se você precisar invocar/gerar script de etapas de download usando o shell Cmd e/ou scripts `.bat` / `.cmd`.
 
@@ -68,4 +68,4 @@ Add-AppxPackage .\app_name.appx
 
 Se você estiver usando um servidor do Windows, poderá encontrar as instruções de instalação na página de documentação do [Windows Server](install-on-server.md).
 
-Após instalar sua distribuição, siga as instruções normais para [atualizar para WSL 2](./install-win10.md#update-to-wsl-2) ou [criar uma conta e senha de usuário](./user-support.md).
+Após instalar sua distribuição, siga as instruções normais para [atualizar para WSL 2](./install-win10.md#step-2---update-to-wsl-2) ou [criar uma conta e senha de usuário](./user-support.md).
