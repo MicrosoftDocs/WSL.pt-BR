@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, MySQL MongoDB, PostgreSQL, SQLite, Mic
 ms.date: 07/07/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 561af482e245892156a02fe287b95867ef80ded1
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: b7e4f7477741a931c4ee71e07736bac115443ac9
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719125"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413297"
 ---
 # <a name="get-started-with-databases-on-windows-subsystem-for-linux"></a>Introdução aos bancos de dados no subsistema do Windows para Linux
 
@@ -19,9 +19,9 @@ Este guia passo a passo ajudará você a começar a conectar seu projeto no WSL 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Executar o Windows 10, [atualizado para a versão 2004](ms-settings:windowsupdate), **Build 19041** ou superiores.
-- [WSL habilitado e instalado e atualizado para o WSL 2](https://docs.microsoft.com/windows/wsl/install-win10).
-- [Distribuição do Linux instalada](https://docs.microsoft.com/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice) (Ubuntu 18, 4 para nossos exemplos).
-- Verifique se a distribuição do Ubuntu 18, 4 está [em execução no modo WSL 2](https://docs.microsoft.com/windows/wsl/install-win10#set-your-distribution-version-to-wsl-1-or-wsl-2). (WSL pode executar distribuições no modo v1 ou v2.) Você pode verificar isso abrindo o PowerShell e inserindo: `wsl -l -v`
+- [WSL habilitado e instalado e atualizado para o WSL 2](../install-win10.md).
+- [Distribuição do Linux instalada](../install-win10.md#step-6---install-your-linux-distribution-of-choice) (Ubuntu 18, 4 para nossos exemplos).
+- Verifique se a distribuição do Ubuntu 18, 4 está [em execução no modo WSL 2](../install-win10.md#set-your-distribution-version-to-wsl-1-or-wsl-2). (WSL pode executar distribuições no modo v1 ou v2.) Você pode verificar isso abrindo o PowerShell e inserindo: `wsl -l -v`
 
 ## <a name="differences-between-database-systems"></a>Diferenças entre sistemas de banco de dados
 
@@ -29,7 +29,7 @@ As [opções mais populares](https://insights.stackoverflow.com/survey/2019#tech
 
 - [MySQL](https://www.mysql.com/why-mysql/) (SQL)
 - [PostgreSQL](https://www.postgresql.org/about/) (SQL)
-- [Microsoft SQL Server](https://docs.microsoft.com/sql) (SQL)
+- [Microsoft SQL Server](/sql) (SQL)
 - [SQLite](https://www.sqlite.org/about.html) (SQL)
 - [MongoDB](https://www.mongodb.com/what-is-mongodb) (NoSQL)
 - [Redis](https://redis.io/topics/introduction) (NoSQL)
@@ -157,7 +157,7 @@ Saiba mais nos documentos do MongoDB:
 
 ## <a name="install-microsoft-sql-server"></a>Instalar o Microsoft SQL Server
 
-Para instalar o SQL Server no WSL (Ubuntu 18, 4), siga este guia de início rápido: [instalar SQL Server e criar um banco de dados no Ubuntu](https://docs.microsoft.com/sql/linux/quickstart-install-connect-ubuntu).
+Para instalar o SQL Server no WSL (Ubuntu 18, 4), siga este guia de início rápido: [instalar SQL Server e criar um banco de dados no Ubuntu](/sql/linux/quickstart-install-connect-ubuntu).
 
 Para trabalhar com bancos de dados Microsoft SQL Server no VS Code, experimente a [extensão MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
 
@@ -226,4 +226,4 @@ Para configurar seu próprio alias personalizado ou atalho para execução deste
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Configurando seu ambiente de desenvolvimento no Windows 10](https://docs.microsoft.com/windows/dev-environment/)
+- [Configurando seu ambiente de desenvolvimento no Windows 10](/windows/dev-environment/)

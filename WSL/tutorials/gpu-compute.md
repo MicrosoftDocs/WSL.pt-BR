@@ -5,12 +5,12 @@ keywords: WSL, Windows, subsistema do Windows, computação GPU, aceleração de
 ms.date: 06/17/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f101022dec534055905b25619a6c4fcee36f3f7d
-ms.sourcegitcommit: 031a74801e03a90aed4b34c4fd5bfe964fc30994
+ms.openlocfilehash: bc20f2d3f1da646ba01dcdc00de8eca6c3825ec8
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947403"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413307"
 ---
 # <a name="gpu-accelerated-machine-learning-training-in-the-windows-subsystem-for-linux"></a>Treinamento de Machine Learning acelerado por GPU no subsistema do Windows para Linux
 
@@ -22,7 +22,7 @@ A utilização da aceleração de GPU para tarefas de computação intensiva é 
 
 ## <a name="install-and-set-up"></a>Instalar e configurar
 
-Saiba mais sobre o suporte do WSL 2 e como começar a treinar modelos de aprendizado de máquina no [Guia de treinamento acelerado da GPU](https://docs.microsoft.com/windows/win32/direct3d12/gpu-accelerated-training) dentro do documentos do DirectML. Este guia aborda:
+Saiba mais sobre o suporte do WSL 2 e como começar a treinar modelos de aprendizado de máquina no [Guia de treinamento acelerado da GPU](/windows/win32/direct3d12/gpu-accelerated-training) dentro do documentos do DirectML. Este guia aborda:
 
 * Diretrizes para iniciantes ou alunos para configurar o TensorFlow com o DirectML
 * Diretrizes para profissionais para começar a executar seus fluxos de trabalho de ML CUDA existentes

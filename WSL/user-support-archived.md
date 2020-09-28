@@ -4,18 +4,18 @@ description: Referência para versões anteriores do Windows para atualizar cont
 ms.date: 01/20/2020
 ms.topic: article
 ROBOTS: NOINDEX
-ms.openlocfilehash: 406158d769c4b465b6168d7cca45b48ff1f201fe
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
+ms.openlocfilehash: 33a42c8f3bd518fa45df2874a6c59b76cd8ec80a
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520835"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413357"
 ---
 # <a name="wsl-user-account-updates-on-previous-windows-versions"></a>WSL atualizações de conta de usuário em versões anteriores do Windows
 
 Esse conteúdo é arquivado para usuários de versões anteriores do sistema operacional Windows que dão suporte ao subsistema para Linux e precisam de suporte com a atualização de contas de usuário do Linux.
 
-Para obter a documentação atual, consulte [contas de usuário para o subsistema do Windows para Linux](../user-support.md).
+Para obter a documentação atual, consulte [contas de usuário para o subsistema do Windows para Linux](./user-support.md).
 
 ### <a name="for-creators-update-version-of-windows-and-earlier"></a>Versão de atualização do para criadores do Windows e versões anteriores
 

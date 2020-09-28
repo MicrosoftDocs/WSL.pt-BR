@@ -4,12 +4,12 @@ description: Listagem de referência e configuração de várias distribuições
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 0a127d376a8606a1a13ea88c9efed161e18a161d
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 73544d4d8c8eda462194f213a0f093b21ab6d90e
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818728"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413317"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>Comandos do WSL e configurações de inicialização
 
@@ -170,7 +170,7 @@ Altere o usuário padrão para o seu logon de distribuição. O usuário já dev
 Por exemplo: `ubuntu config --default-user johndoe` alteraria o usuário padrão para a distribuição do Ubuntu para o usuário "davibarros".
 
 > [!NOTE]
-> Se você estiver tendo problemas para descobrir o nome da sua distribuição, consulte [listar distribuições](https://docs.microsoft.com/windows/wsl/wsl-config#list-distributions) para o comando para listar o nome oficial das distribuições instaladas. 
+> Se você estiver tendo problemas para descobrir o nome da sua distribuição, consulte [listar distribuições](#list-distributions) para o comando para listar o nome oficial das distribuições instaladas. 
 
 ## <a name="run-a-specific-distribution"></a>Executar uma distribuição específica
 
@@ -309,9 +309,9 @@ Rótulo da seção: `[user]`
 
 Essas opções estão disponíveis no Build 18980 e posterior.
 
-| chave | value | default | HDInsight|
+| chave | value | padrão | HDInsight|
 |:----|:----|:----|:----|
-| default | string | O nome de usuário inicial criado na primeira execução | Definir essa chave especifica qual usuário executar como ao iniciar pela primeira vez uma sessão WSL. |
+| padrão | string | O nome de usuário inicial criado na primeira execução | Definir essa chave especifica qual usuário executar como ao iniciar pela primeira vez uma sessão WSL. |
 
 ## <a name="configure-global-options-with-wslconfig"></a>Configurar opções globais com. wslconfig
 
@@ -336,7 +336,7 @@ Rótulo da seção: `[wsl2]`
 
 Essas configurações afetam a VM que alimenta qualquer distribuição WSL 2.
 
-| chave | value | default | HDInsight|
+| chave | value | padrão | HDInsight|
 |:----|:----|:----|:----|
 | kernel | string | A caixa de entrada fornecida pelo kernel criado pela Microsoft | Um caminho absoluto do Windows para um kernel personalizado do Linux. |
 | memória | tamanho | 50% da memória total no Windows ou 8 GB, o que for menor; em builds antes de 20175:80% da memória total no Windows | A quantidade de memória a ser atribuída à VM WSL 2. |

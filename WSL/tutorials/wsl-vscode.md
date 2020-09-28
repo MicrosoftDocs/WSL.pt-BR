@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, Bash, vs Code, extensão r
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d7bd4f582f504ea3c4bd814454b1dc881ffed2
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: b39b34644040354df44bf62ec7b878e3f5d667e6
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948650"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413337"
 ---
 # <a name="get-started-using-visual-studio-code-with-windows-subsystem-for-linux"></a>Introdução ao uso de Visual Studio Code com o subsistema do Windows para Linux
 
@@ -56,7 +56,7 @@ sudo apt-get install wget ca-certificates
 
 ### <a name="from-the-command-line"></a>Na linha de comando
 
-Para abrir um projeto da sua distribuição do WSL, abra a linha de comando da distribuição e digite:`code .`
+Para abrir um projeto da sua distribuição do WSL, abra a linha de comando da distribuição e digite: `code .`
 
 ![Abrir o projeto WSL com o servidor remoto VS Code](../media/wsl-open-vs-code.gif)
 
@@ -92,7 +92,7 @@ Para instalar o Git, consulte [Configurar o Git para funcionar com o subsistema 
 
 ## <a name="install-windows-terminal-optional"></a>Instalar o Terminal do Windows (opcional)
 
-O novo terminal do Windows permite várias guias (alternar rapidamente entre o prompt de comando, o PowerShell ou várias distribuições do Linux), associações de chave personalizadas (crie suas próprias teclas de atalho para abrir ou fechar guias, copiar + colar, etc.), emojis ☺ e temas personalizados (esquemas de cores, estilos e tamanhos de fonte, imagem de plano de fundo/desfoque Saiba mais nos [documentos de terminal do Windows](https://docs.microsoft.com/windows/terminal).
+O novo terminal do Windows permite várias guias (alternar rapidamente entre o prompt de comando, o PowerShell ou várias distribuições do Linux), associações de chave personalizadas (crie suas próprias teclas de atalho para abrir ou fechar guias, copiar + colar, etc.), emojis ☺ e temas personalizados (esquemas de cores, estilos e tamanhos de fonte, imagem de plano de fundo/desfoque Saiba mais nos [documentos de terminal do Windows](/windows/terminal).
 
 1. Obtenha o [Terminal do Windows na Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701): Ao instalar por meio da loja, as atualizações serão manipuladas automaticamente.
 
@@ -105,7 +105,7 @@ O novo terminal do Windows permite várias guias (alternar rapidamente entre o p
 * [Tutorial de desenvolvimento remoto com WSL](https://code.visualstudio.com/remote-tutorials/wsl/getting-started)
 * [Usando o Docker com WSL 2 e VS Code](https://code.visualstudio.com/blogs/2020/03/02/docker-in-wsl2)
 * [Usando C++ e WSL no VS Code](https://code.visualstudio.com/docs/cpp/config-wsl)
-* [Serviço R Remoto para Linux](https://docs.microsoft.com/visualstudio/rtvs/setting-up-remote-r-service-on-linux?view=vs-2017)
+* [Serviço R Remoto para Linux](/visualstudio/rtvs/setting-up-remote-r-service-on-linux)
 
 Algumas extensões adicionais que talvez você queira considerar incluem:
 
