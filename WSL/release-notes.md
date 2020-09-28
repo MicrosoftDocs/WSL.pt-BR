@@ -6,23 +6,33 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 57d06a8666f8003b187f043bd18655a9287d8a63
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: f79acbbc7f6436bae54c5160e769cababa76a341
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866100"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818688"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas sobre a versão do subsistema Windows para Linux
+
+## <a name="build-20211"></a>Build 20211
+Para obter informações gerais do Windows sobre o build 20211, visite o [blog do Windows](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20211/).
+
+* Introduza `wsl.exe --mount` para montar discos físicos ou virtuais. Para obter mais informações, confira [Acessar sistemas de arquivos do Linux no Windows e no WSL 2](https://devblogs.microsoft.com/commandline/access-linux-filesystems-in-windows-and-wsl-2/).
+* Conserte a falha no serviço LxssManager ao verificar se a VM está ociosa. [GH 5768]
+* Suporte para arquivos VHD compactados. [GH 4103]
+* Verifique se as bibliotecas de modo de usuário do Linux para c:\windows\system32\lxss\lib estão preservadas na atualização do sistema operacional. [GH 5848]
+* A capacidade de listar as distribuições disponíveis que podem ser instaladas com `wsl --install --list-distributions` foi adicionada.
+* Agora, as instâncias de WSL são encerradas quando o usuário faz logoff.
 
 ## <a name="build-20190"></a>Build 20190
 Para obter informações gerais do Windows sobre o build 20190, acesse o [blog do Windows](https://blogs.windows.com/windowsexperience/2020/08/12/announcing-windows-10-insider-preview-build-20190/).
 
-* Corrigir bug impedindo a inicialização de instâncias WSL1 [GH 5633]
-* Corrigir o travamento ao redirecionar a saída do processo do Windows [GH 5648]
-* Adicionar a opção %userprofile%\\.wslconfig para controlar o tempo limite de ociosidade da VM (wsl2.vmIdleTimeout=<tempo_em_ms>)
-* Dar suporte à inicialização de aliases de execução de aplicativo do WSL
-* Suporte adicionado para instalar o kernel WSL2 e distribuições para o wsl.exe --install
+* Consertar bug que impede a inicialização de instâncias WSL1. [GH 5633]
+* Consertar o travamento ao redirecionar a saída do processo do Windows. [GH 5648]
+* Adicionar a opção %userprofile%\\.wslconfig para controlar o tempo limite de ociosidade da VM (wsl2.vmIdleTimeout=<time_in_ms>).
+* Dar suporte à inicialização de aliases de execução de aplicativo do WSL.
+* O suporte para instalar as distribuições e o kernel do WSL2 em wsl.exe --install foi adicionado.
 
 ## <a name="build-20175"></a>Build 20175
 Para obter informações gerais do Windows sobre o build 20175, visite o [blog do Windows](https://blogs.windows.com/windowsexperience/2020/07/22/announcing-windows-10-insider-preview-build-20175/).

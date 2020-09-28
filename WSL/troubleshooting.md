@@ -5,16 +5,16 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2335db4daf8b9c5c67ad04a1fc94339b6c01e546
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.openlocfilehash: 83c73e99afd4745081290340a67edee3ec26dc60
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427193"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818708"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solução de problemas do Subsistema Windows para Linux
 
-Para obter suporte com problemas relacionados ao WSL, consulte nosso repositório do GitHub:
+Para obter suporte com problemas relacionados ao WSL, confira nosso repositório do GitHub: https://github.com/Microsoft/wsl/issues
 
 ## <a name="search-for-any-existing-issues-related-to-your-problem"></a>Procure problemas existentes relacionados ao seu problema
 
@@ -44,7 +44,7 @@ Por fim, se o problema estiver relacionado ao Terminal do Windows, ao console do
 
 É provável que seu computador ainda não tenha feito o backport para o WSL 2. A maneira mais simples de resolver isso é indo até as Configurações do Windows e clicando em "Verificar Atualizações" para instalar as atualizações mais recentes no sistema. Veja as instruções completas sobre como fazer o backport [aqui](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it). 
 
-Se você clicar em "Verificar Atualizações" e ainda não receber a atualização, instale o KB KB4566116 manualmente [seguindo este link](http://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116).  
+Se você clicar em "Verificar Atualizações" e ainda não receber a atualização, instale o KB KB4566116 manualmente [seguindo este link](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116).  
 
 ### <a name="error-0x1bc-when-wsl---set-default-version-2"></a>Erro: 0x1bc quando `wsl --set-default-version 2`
 Isso pode acontecer quando a configuração de 'Idioma de Exibição' ou 'Localidade do Sistema' não é inglês.
