@@ -6,12 +6,12 @@ ms.date: 09/15/2020
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 0f16471968151fa040d41baa90af6aedfb6fee79
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: f769261bab35619b034e2a84e4f308eeb0a93cb4
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719185"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413236"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Perguntas frequentes sobre o Subsistema Windows para Linux
 
@@ -45,7 +45,7 @@ O [Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) é uma linguagem d
 
 ## <a name="how-does-this-work"></a>Como isso funciona?
 
-Confira nosso [blog](https://blogs.msdn.microsoft.com/wsl/) com os detalhes sobre a tecnologia subjacente.
+Confira nosso [blog](/archive/blogs/wsl/) com os detalhes sobre a tecnologia subjacente.
 
 ## <a name="why-would-i-use-wsl-rather-than-linux-in-a-vm"></a>Por que usar o WSL em vez do Linux em uma VM?
 
@@ -103,7 +103,7 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec
 
 Agora, todas as operações de git realizadas na distribuição do WSL usarão o Gerenciador de Credenciais. Se você já tiver credenciais armazenadas em cache para um host, elas serão acessadas do Gerenciador de Credenciais. Caso contrário, você receberá uma resposta em uma caixa de diálogo solicitando suas credenciais, mesmo que esteja em um console do Linux.
 
-Esse suporte depende da [interoperabilidade entre o Subsistema do Windows para Linux e o próprio Windows](https://docs.microsoft.com/windows/wsl/interop).
+Esse suporte depende da [interoperabilidade entre o Subsistema do Windows para Linux e o próprio Windows](./interop.md).
 
 ## <a name="how-do-i-use-a-windows-file-with-a-linux-app"></a>Como uso um arquivo do Windows com um aplicativo do Linux?
 
@@ -161,7 +161,7 @@ Em builds anteriores ao 1709 (16299), abra um prompt de comando e execute:
   lxrun /uninstall /full
   ```
   
-As distribuições do WSL instaladas no repositório podem ser desinstaladas como qualquer outro aplicativo do Windows clicando com o botão direito do mouse no bloco do aplicativo e clicando em Desinstalar ou por meio do PowerShell usando o cmdlet [`Remove-AppxPackage`](https://technet.microsoft.com/library/hh856038.aspx).
+As distribuições do WSL instaladas no repositório podem ser desinstaladas como qualquer outro aplicativo do Windows clicando com o botão direito do mouse no bloco do aplicativo e clicando em Desinstalar ou por meio do PowerShell usando o cmdlet [`Remove-AppxPackage`](/previous-versions//hh856038(v=technet.10)).
 
 ## <a name="why-does-ping-generate-permission-denied-errors"></a>Por que o ping gera erros de permissão negada?
 
@@ -181,7 +181,7 @@ O WSL não é compatível com a execução em um console herdado. Para desligar 
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>Por que obtenho "Erro: 0x80040154" quando executo o bash.exe após a atualização do Windows?
 
-O recurso “Subsistema Windows para Linux” pode ser desabilitado durante uma atualização do Windows. Se isso acontecer, o recurso do Windows deverá ser habilitado novamente. As instruções para habilitar o recurso “Subsistema Windows para Linux” podem ser encontradas no [Guia de instalação](https://docs.microsoft.com/windows/wsl/install-win10).
+O recurso “Subsistema Windows para Linux” pode ser desabilitado durante uma atualização do Windows. Se isso acontecer, o recurso do Windows deverá ser habilitado novamente. As instruções para habilitar o recurso “Subsistema Windows para Linux” podem ser encontradas no [Guia de instalação](./install-win10.md).
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>Como alterar o idioma de exibição do WSL?
 

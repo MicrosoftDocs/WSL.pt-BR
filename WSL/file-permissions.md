@@ -6,12 +6,12 @@ ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
-ms.openlocfilehash: 81d4cfa1ae57cdd077ba8cbd614111881724718a
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: 3de8553baf616ee8d5d45f0738615f83df952942
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336069"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413217"
 ---
 # <a name="file-permissions-for-wsl"></a>Permissões de arquivo para WSL
 
@@ -32,7 +32,7 @@ O WSL pode adicionar quatro atributos estendidos do NTFS:
 | $LXMOD | Modo de arquivo (tipo e octals de permissão de sistemas de arquivos, por exemplo: 0777) |
 | $LXDEV | Dispositivo, se for um arquivo de dispositivo |
 
-Além disso, um arquivo que não seja um arquivo ou diretório regular (por exemplo, symlinks, FIFOs, dispositivos de bloco, soquetes UNIX e dispositivos de caracteres) também tem um [ponto de nova análise](https://docs.microsoft.com/windows/win32/fileio/reparse-points) do NTFS. Isso torna muito mais rápida a determinação do tipo de arquivo em um determinado diretório sem precisar consultar seus atributos estendidos.
+Além disso, um arquivo que não seja um arquivo ou diretório regular (por exemplo, symlinks, FIFOs, dispositivos de bloco, soquetes UNIX e dispositivos de caracteres) também tem um [ponto de nova análise](/windows/win32/fileio/reparse-points) do NTFS. Isso torna muito mais rápida a determinação do tipo de arquivo em um determinado diretório sem precisar consultar seus atributos estendidos.
 
 ## <a name="file-access-scenarios"></a>Cenários de acesso a arquivos
 

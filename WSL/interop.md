@@ -4,12 +4,12 @@ description: Descreve a interoperabilidade do Windows com distribuições do Lin
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: d78cc53aa40f896c20e40a5ef00570a97ccac258
-ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
+ms.openlocfilehash: 8e3568e4ca94f9b381b7827a237c2b637b97ae57
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86093266"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413067"
 ---
 # <a name="windows-interoperability-with-linux"></a>Interoperabilidade do Windows com o Linux
 
@@ -240,4 +240,4 @@ O binário do Windows deve incluir a extensão do arquivo, corresponder o caso d
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-* [Postagem do blog do WSL sobre interoperabilidade de 2016](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)
+* [Postagem do blog do WSL sobre interoperabilidade de 2016](/archive/blogs/wsl/windows-and-ubuntu-interoperability)
