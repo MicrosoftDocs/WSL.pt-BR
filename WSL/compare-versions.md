@@ -6,12 +6,12 @@ ms.date: 09/15/2020
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.custom: contperfq1
-ms.openlocfilehash: e8a8fc2c5e844ae5b6a62b2a4f7844e674bdcfd9
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 5aa37c632fe1e02680bdef307a5923d05dfb3f60
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818738"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413111"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Comparação entre o WSL 1 e o WSL 2
 
