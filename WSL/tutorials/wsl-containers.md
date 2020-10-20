@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, Windows 10, Docker, contêineres
 ms.date: 08/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a1187336341d73f662b7e9f27b19df4fd0e1e73
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: cca53f2079e026fbe765ad13cc67722457f83c23
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413327"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211780"
 ---
 # <a name="get-started-with-docker-remote-containers-on-wsl-2"></a>Introdução aos contêineres remotos do Docker no WSL 2
 
@@ -20,11 +20,11 @@ O Docker desktop para Windows está disponível gratuitamente e fornece um ambie
 
 ## <a name="overview-of-docker-containers"></a>Visão geral dos contêineres do Docker
 
-O Docker é uma ferramenta usada para criar, implantar e executar aplicativos usando contêineres. Os contêineres permitem que os desenvolvedores Empacotem um aplicativo com todas as partes de que precisa (bibliotecas, estruturas, dependências etc.) e enviam tudo isso como um pacote. O uso de um contêiner garante que o aplicativo será executado da mesma forma, independentemente de quaisquer configurações personalizadas ou de bibliotecas instaladas anteriormente no computador que o executa, o que poderia ser diferente do computador usado para gravar e testar o código do aplicativo. Isso permite que os desenvolvedores se concentrem em escrever código sem se preocupar com o sistema no qual o código será executado.
+O Docker é uma ferramenta usada para criar, implantar e executar aplicativos usando contêineres. Os contêineres permitem que os desenvolvedores empacotem um aplicativo com todas as partes necessárias (bibliotecas, estruturas, dependências etc.) e enviem tudo isso como um pacote. O uso de um contêiner garante que o aplicativo seja executado da mesma forma, independentemente de configurações personalizadas ou das bibliotecas instaladas anteriormente no computador que o executa, que poderiam ser diferentes do computador usado para escrever e testar o código do aplicativo. Isso permite que os desenvolvedores se concentrem em escrever código sem se preocupar com o sistema no qual o código será executado.
 
 Os contêineres do Docker são semelhantes às máquinas virtuais, mas não criam um sistema operacional virtual inteiro. Em vez disso, o Docker permite que o aplicativo use o mesmo kernel do Linux que o sistema em que ele está sendo executado. Isso permite que o pacote do aplicativo exija apenas as partes que ainda não estão no computador host, reduzindo o tamanho do pacote e melhorando o desempenho.
 
-A disponibilidade contínua, usando contêineres do Docker com ferramentas como [kubernetes](/azure/aks/), é outro motivo para a popularidade dos contêineres. Isso permite que várias versões do seu contêiner de aplicativo sejam criadas em momentos diferentes. Em vez de precisar desativar um sistema inteiro para atualizações ou manutenção, cada contêiner (e seus microserviços específicos) pode ser substituído de forma dinâmica. Você pode preparar um novo contêiner com todas as suas atualizações, configurar o contêiner para produção e apenas apontar para o novo contêiner quando ele estiver pronto. Você também pode arquivar versões diferentes do seu aplicativo usando contêineres e mantê-los em execução como um fallback de segurança, se necessário.
+A disponibilidade contínua, usando contêineres do Docker com ferramentas como [Kubernetes](/azure/aks/), é outro motivo para a popularidade dos contêineres. Isso permite que várias versões de seu contêiner de aplicativo sejam criadas em momentos diferentes. Em vez de precisar desativar um sistema inteiro para atualizações ou manutenção, cada contêiner (e seus microsserviços específicos) pode ser substituído de forma dinâmica. Você pode preparar um novo contêiner com todas as atualizações, configurar o contêiner para produção e apenas apontar para o novo contêiner quando ele estiver pronto. Também é possível arquivar versões diferentes do aplicativo usando contêineres e mantê-los em execução como um fallback de segurança, se necessário.
 
 Para saber mais, faça checkout da [introdução aos contêineres do Docker](/learn/modules/intro-to-docker-containers/) em Microsoft learn.
 
@@ -32,7 +32,7 @@ Para saber mais, faça checkout da [introdução aos contêineres do Docker](/le
 
 - Verifique se o computador está executando o Windows 10, [atualizado para a versão 2004](ms-settings:windowsupdate), **Build 18362** ou superior.
 - [Habilite o WSL, instale uma distribuição do Linux e atualize para o WSL 2](../install-win10.md).
-- [Baixe e instale o pacote de atualização do kernel do Linux](/windows/wsl/wsl2-kernel).
+- [Baixe e instale o pacote de atualização do kernel do Linux](../install-win10.md#step-4---download-the-linux-kernel-update-package).
 - [Instalar Visual Studio Code](https://code.visualstudio.com/download) *(opcional)*. Isso fornecerá a melhor experiência, incluindo a capacidade de codificar e depurar dentro de um contêiner remoto do Docker e conectado à sua distribuição do Linux.
 - [Instale o terminal do Windows](/windows/terminal/get-started) *(opcional)*. Isso fornecerá a melhor experiência, incluindo a capacidade de personalizar e abrir vários terminais na mesma interface (incluindo Ubuntu, Debian, PowerShell, CLI do Azure ou o que você preferir usar).
 - [Inscreva-se para obter uma ID do Docker no Hub do Docker](https://hub.docker.com/signup) *(opcional)*.
@@ -67,8 +67,8 @@ Para instalar o Docker (depois de já [instalar o WSL 2](../install-win10.md)):
 > Aqui estão alguns comandos úteis do Docker para saber:
 >
 > - Liste os comandos disponíveis na CLI do Docker digitando: `docker`
-> - Listar informações para um comando específico com: `docker <COMMAND> --help`
-> - Liste as imagens do Docker em seu computador (que é apenas a imagem Hello-World neste ponto), com: `docker image ls --all`
+> - Liste as informações para um comando específico com: `docker <COMMAND> --help`
+> - Liste as imagens do Docker em seu computador (que é apenas a imagem hello-world neste momento), com: `docker image ls --all`
 > - Listar os contêineres em seu computador, com: `docker container ls --all` ou `docker ps -a` (sem o sinalizador-a mostrar todos, somente contêineres em execução serão exibidos)
 > - Listar informações de todo o sistema sobre a instalação do Docker, incluindo estatísticas e recursos (CPU & memória) disponíveis no contexto WSL 2, com: `docker info`
 
@@ -78,13 +78,13 @@ Para começar a desenvolver aplicativos usando o Docker com o WSL 2, é recomend
 
 - [Instale o vs Code extensão Remote-WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). Essa extensão permite que você abra seu projeto do Linux em execução no WSL no VS Code (não há necessidade de se preocupar com problemas de caminhos, compatibilidade binária ou outros desafios entre sistemas operacionais).
 
-- [Instale a extensão de contêineres remotos do vs Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Essa extensão permite que você abra a pasta do projeto ou o repositório dentro de um contêiner, aproveitando o conjunto de recursos completo do Visual Studio Code para fazer seu trabalho de desenvolvimento dentro do contêiner.
+- [Instale a extensão de Remote-Containers do vs Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Essa extensão permite que você abra a pasta do projeto ou o repositório dentro de um contêiner, aproveitando o conjunto de recursos completo do Visual Studio Code para fazer seu trabalho de desenvolvimento dentro do contêiner.
 
-- [Instale a extensão do docker vs Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker). Essa extensão adiciona a funcionalidade para compilar, gerenciar e implantar aplicativos em contêineres de dentro VS Code. (Você precisa da extensão de contêiner remoto para realmente usar o contêiner como seu ambiente de desenvolvimento.)
+- [Instale a extensão do docker vs Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker). Essa extensão adiciona a funcionalidade para compilar, gerenciar e implantar aplicativos em contêineres de dentro VS Code. (Você precisa da extensão de Remote-Container para realmente usar o contêiner como seu ambiente de desenvolvimento.)
 
 Vamos usar o Docker para criar um contêiner de desenvolvimento para um projeto de aplicativo existente.
 
-1. Para este exemplo, usarei o código-fonte do meu [tutorial de Olá, mundo para Django](/windows/python/web-frameworks#hello-world-tutorial-for-django) no ambiente de desenvolvimento do Python configurar documentos. Você pode ignorar esta etapa se preferir usar seu próprio código-fonte do projeto. Para baixar meu aplicativo Web HelloWorld-Django do GitHub, abra um terminal WSL (Ubuntu, por exemplo) e digite: `git clone https://github.com/mattwojo/helloworld-django.git`
+1. Para este exemplo, usarei o código-fonte do meu [tutorial de Olá, mundo para Django](/windows/python/web-frameworks#hello-world-tutorial-for-django) no ambiente de desenvolvimento do Python configurar documentos. Você pode ignorar esta etapa se preferir usar seu próprio código-fonte do projeto. Para baixar meu aplicativo Web do HelloWorld-Django do GitHub, abra um terminal do WSL (Ubuntu, por exemplo) e digite: `git clone https://github.com/mattwojo/helloworld-django.git`
 
     > [!NOTE]
     > Sempre armazene seu código no mesmo sistema de arquivos no qual você está usando ferramentas. Isso resultará em um desempenho mais rápido de acesso a arquivos. Neste exemplo, estamos usando um Linux distribuição (Ubuntu) e desejamos armazenar nossos arquivos de projeto no sistema de arquivos WSL `\\wsl\` . O armazenamento de arquivos de projeto no sistema de arquivos do Windows reduziria significativamente as coisas ao usar as ferramentas do Linux no WSL para acessar esses arquivos.
