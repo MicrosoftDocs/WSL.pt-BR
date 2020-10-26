@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, window
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 74a5960609e058b2f2da6160ecd04dc48f666a69
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: cf349615dc40f1912fdb4dff3f5593627fa246e6
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413107"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211770"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guia de instalação do Subsistema Windows para Linux para Windows 10
 
@@ -28,7 +28,7 @@ Abra o PowerShell como administrador e execute:
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-Agora, é recomendável passar para a etapa 2, de atualização para o WSL 2. Mas, se você desejar instalar apenas o WSL 1, será possível reiniciar o computador e passar para a [Etapa 6 – Instalar a distribuição do Linux de sua escolha](./install-win10.md#step-6---install-your-linux-distribution-of-choice). Para atualizar para o WSL 2, aguarde o seu computador ser reiniciado e passe para a próxima etapa.
+Agora, é recomendável passar para a etapa 2, de atualização para o WSL 2. Mas, se você desejar instalar apenas o WSL 1, será possível **reiniciar** o computador e passar para a [Etapa 6 – Instalar a distribuição do Linux de sua escolha](./install-win10.md#step-6---install-your-linux-distribution-of-choice). Para atualizar para o WSL 2, **aguarde o seu computador ser reiniciado** e passe para a próxima etapa.
 
 ## <a name="step-2---update-to-wsl-2"></a>Etapa 2 – Atualizar para o WSL 2
 
@@ -40,14 +40,14 @@ Para atualizar para o WSL 2, você precisa estar executando o Windows 10.
 - Para sistemas ARM64: **Versão 2004** ou superiores, com o **Build 19041** ou superiores.
 - Os builds inferiores a 18362 não dão suporte a WSL 2. Use o [Assistente do Windows Update](https://www.microsoft.com/software-download/windows10) para atualizar a sua versão do Windows.
 
-Para verificar a sua versão e o número de build, selecione a **tecla do logotipo do Windows + R**, digite **winver** e selecione **OK**. (Ou digite o comando `ver` no prompt de comando do Windows). [Atualize para a versão mais recente do Windows](ms-settings:windowsupdate) no menu Configurações.
+Para verificar a sua versão e o número de build, selecione a **tecla do logotipo do Windows + R** , digite **winver** e selecione **OK** . (Ou digite o comando `ver` no prompt de comando do Windows). [Atualize para a versão mais recente do Windows](ms-settings:windowsupdate) no menu Configurações.
 
 > [!NOTE]
 > Se você estiver executando o Windows 10 versão 1903 ou 1909, abra "Configurações" no menu do Windows, navegue até "Atualizações e Segurança" e selecione "Verificar Atualizações". O número de Build precisa ser 18362.1049+ ou 18363.1049+ e o nº do build secundário deve ser maior que .1049. Leia mais: [O suporte a WSL 2 estará disponível em breve nas Versões 1903 e 1909 do Windows 10](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/). Confira as [instruções de solução de problemas](./troubleshooting.md#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2).
 
 ## <a name="step-3---enable-virtual-machine-feature"></a>Etapa 3 – Habilitar o recurso de Máquina Virtual
 
-Antes de instalar o WSL 2, você precisa habilitar o recurso opcional **Plataforma de Máquina Virtual**.
+Antes de instalar o WSL 2, você precisa habilitar o recurso opcional **Plataforma de Máquina Virtual** .
 
 Abra o PowerShell como administrador e execute:
 
@@ -74,7 +74,7 @@ Depois que a instalação for concluída, vá para a próxima etapa: configurar 
 
 ## <a name="step-5---set-wsl-2-as-your-default-version"></a>Etapa 5 – Definir o WSL 2 como a sua versão padrão
 
-Abra o PowerShell como administrador e execute este comando para definir o WSL 2 como a versão padrão ao instalar uma nova distribuição do Linux:
+Abra o PowerShell e execute este comando para definir o WSL 2 como a versão padrão ao instalar uma nova distribuição do Linux:
 
 ```powershell
 wsl --set-default-version 2
@@ -160,7 +160,7 @@ Veja abaixo erros relacionados e correções sugeridas. Consulte a [página de s
 
 - **Falha na instalação com o erro 0x80070003**
   - O Subsistema Windows para Linux é executado somente na unidade do sistema (normalmente, a unidade `C:`). Verifique se as distribuições estão armazenadas na unidade do sistema:  
-  - Abra **Configurações** -> **Armazenamento** -> **Mais Configurações de Armazenamento: Altere onde o novo conteúdo é salvo**
+  - Abra **Configurações** -> **Sistema –> **Armazenamento** -> **Mais Configurações de Armazenamento: Altere onde o novo conteúdo é salvo**
     ![Imagem das configurações do sistema para instalar aplicativos na unidade C:](media/AppStorage.png)
 
 - **WslRegisterDistribution falhou com o erro 0x8007019e**

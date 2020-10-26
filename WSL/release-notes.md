@@ -6,14 +6,19 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: d7b868f959c62879524dcbdad20509ef35fecfce
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: c772185501b009369d7d47752dc792b8f90b482d
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413267"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211740"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas sobre a versão do subsistema Windows para Linux
+
+## <a name="build-20226"></a>Build 20226
+Para obter informações gerais do Windows sobre o build 20226, visite o [blog do Windows](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20226/).
+
+* Conserte a falha no serviço LxssManager. [GH 5902]
 
 ## <a name="build-20211"></a>Build 20211
 Para obter informações gerais do Windows sobre o build 20211, visite o [blog do Windows](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20211/).
@@ -718,7 +723,7 @@ Para obter informações gerais do Windows sobre o Build 17063, visite o [blog d
 
 ### <a name="wsl"></a>WSL
 * O DrvFs dá suporte a metadados adicionais do Linux. Isso permite definir o proprietário e o modo de arquivos usando chmod/chown e também criar arquivos especiais, tais como FIFOs, soquetes Unix e arquivos de dispositivo. Por enquanto, isso é desabilitado por padrão, pois ainda é experimental.
-**Observação**:  Corrigimos um bug no formato de metadados usado pelo DrvFs. Embora os metadados funcionem nesse Build para experimentação, os builds futuros não leem corretamente os metadados criados por esse build.  Talvez seja necessário atualizar manualmente o proprietário para arquivos modificados e os dispositivos com uma ID de dispositivo personalizada precisarão ser recriados.
+**Observação** :  Corrigimos um bug no formato de metadados usado pelo DrvFs. Embora os metadados funcionem nesse Build para experimentação, os builds futuros não leem corretamente os metadados criados por esse build.  Talvez seja necessário atualizar manualmente o proprietário para arquivos modificados e os dispositivos com uma ID de dispositivo personalizada precisarão ser recriados.
 
   Para habilitar, monte o DrvFs com a opção de metadados (para habilitá-lo em uma montagem existente, você precisa primeiro desmontá-lo):
 

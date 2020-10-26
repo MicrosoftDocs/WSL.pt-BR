@@ -1,24 +1,24 @@
 ---
 title: Comparação entre o WSL 2 e o WSL 1
-description: 'Compare as versões 1 e 2 do Subsistema do Windows para Linux. Saiba o que há de novo no WSL 2: kernel real do Linux, velocidade mais rápida, compatibilidade total com chamadas do sistema. O WSL 1 funcionará melhor se você estiver armazenando arquivos em sistemas de arquivos operacionais. Você pode expandir o tamanho do seu VHD (Disco de Hardware Virtual) do WSL 2.'
-keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubuntu, debian, suse, windows 10, UX changes, WSL 2, linux kernel, network applications, localhost, IPv6, Virtual Hardware Disk, VHD, VHD limitations, VHD error
+description: 'Compare as versões 1 e 2 do Subsistema do Windows para Linux. Saiba o que há de novo no WSL 2: kernel real do Linux, velocidade mais rápida, compatibilidade total com chamadas do sistema. O WSL 1 funcionará melhor se você estiver armazenando arquivos em sistemas de arquivos operacionais. Você pode expandir o tamanho do seu VHD (Disco Rígido Virtual) do WSL 2.'
+keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubuntu, debian, suse, windows 10, alterações do UX, WSL 2, kernel do linux, aplicativos de rede, localhost, IPv6, Disco Rígido Virtual, VHD, limitações do VHD, erro do VHD
 ms.date: 09/15/2020
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.custom: contperfq1
-ms.openlocfilehash: 5aa37c632fe1e02680bdef307a5923d05dfb3f60
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: ce68a19da519ddae5dd562c75c9ba2bac3659190
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413111"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211760"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Comparação entre o WSL 1 e o WSL 2
 
 A principal diferença e os motivos para atualizar o Subsistema do Windows para Linux do WSL 1 para o WSL 2 são:
 
-- **aumentar o desempenho do sistema de arquivos**,
-- **dar suporte à compatibilidade total com chamadas do sistema**.
+- **aumentar o desempenho do sistema de arquivos** ,
+- **dar suporte à compatibilidade total com chamadas do sistema** .
 
 O WSL 2 usa a mais recente e melhor tecnologia de virtualização para executar um kernel do Linux dentro de uma VM (máquina virtual) do utilitário leve. No entanto, o WSL 2 não é uma experiência de VM tradicional.
 
@@ -51,7 +51,7 @@ Por exemplo, ao armazenar seus arquivos de projeto do WSL:
 
 Você pode acessar o sistema de arquivos raiz do Linux com aplicativos e ferramentas do Windows, como o Explorador de Arquivos. Tente abrir uma distribuição do Linux (como o Ubuntu), verifique se você está no diretório base do Linux digitando este comando: `cd ~`. Em seguida, abra o sistema de arquivos do Linux no Explorador de Arquivos digitando *(não se esqueça do ponto no final)* : `explorer.exe .`
 
-O WSL 2 só está disponível no Windows 10, versão 1903, Build 18362 ou superior. Verifique sua versão do Windows selecionando a **tecla do logotipo do Windows + R**, digite **winver**, selecione **OK**. (Ou digite o comando `ver` no prompt de comando do Windows). Você pode precisar [atualizar para a última versão do Windows](ms-settings:windowsupdate). Para builds inferiores ao 18362, não há nenhum suporte para o WSL.
+O WSL 2 só está disponível no Windows 10, versão 1903, Build 18362 ou superior. Verifique sua versão do Windows selecionando a **tecla do logotipo do Windows + R** , digite **winver** , selecione **OK** . (Ou digite o comando `ver` no prompt de comando do Windows). Você pode precisar [atualizar para a última versão do Windows](ms-settings:windowsupdate). Para builds inferiores ao 18362, não há nenhum suporte para o WSL.
 
 > [!NOTE]
 > O WSL 2 funcionará com o [VMware 15.5.5+](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) e o [VirtualBox 6+](https://www.virtualbox.org/wiki/Changelog-6.0). Saiba mais nas [Perguntas frequentes do WSL 2.](./wsl2-faq.md#will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox)
@@ -160,11 +160,11 @@ netsh interface portproxy add v4tov4 listenport=4000 listenaddress=0.0.0.0 conne
 
 Atualmente, as distribuições do WSL 2 não conseguem acessar endereços IPv6. Estamos trabalhando para adicionar esse recurso.
 
-## <a name="expanding-the-size-of-your-wsl-2-virtual-hardware-disk"></a>Como expandir o tamanho do seu Disco de Hardware Virtual do WSL 2
+## <a name="expanding-the-size-of-your-wsl-2-virtual-hard-disk"></a>Como expandir o tamanho do seu Disco Rígido Virtual do WSL 2
 
-O WSL 2 usa um VHD (Disco de Hardware Virtual) para armazenar seus arquivos do Linux. Se o tamanho máximo for atingido, talvez seja necessário expandi-lo.
+O WSL 2 usa um VHD (Disco Rígido Virtual) para armazenar os seus arquivos do Linux. No WSL 2, um VHD é representado no seu disco rígido do Windows como um arquivo *.vhdx* .
 
-O VHD do WSL 2 usa o sistema de arquivos ext4. Esse VHD é redimensionado automaticamente para atender às suas necessidades de armazenamento e tem um tamanho máximo inicial de 256 GB. Se a sua distribuição aumentar de tamanho para exceder 256 GB, você verá erros informando que você ficou sem espaço em disco. Para corrigir esse erro, expanda o tamanho do VHD.
+O VHD do WSL 2 usa o sistema de arquivos ext4. Esse VHD é redimensionado automaticamente para atender às suas necessidades de armazenamento e tem um tamanho máximo inicial de 256 GB. Se o espaço de armazenamento exigido pelos seus arquivos do Linux exceder esse tamanho, talvez seja necessário expandi-lo. Se a sua distribuição aumentar de tamanho para exceder 256 GB, você verá erros informando que você ficou sem espaço em disco. Para corrigir esse erro, expanda o tamanho do VHD.
 
 Para expandir o tamanho máximo do VHD para mais de 256 GB:
 
@@ -179,18 +179,54 @@ Para expandir o tamanho máximo do VHD para mais de 256 GB:
 
 4. Redimensione o VHD do WSL 2 concluindo os seguintes comandos:
    - Abra o prompt de comando do Windows com privilégios de administrador e digite:
-      - `diskpart`
-      - `Select vdisk file="<pathToVHD>"`
-      - `expand vdisk maximum="<sizeInMegaBytes>"`
+
+      ```powershell
+      diskpart
+      DISKPART> Select vdisk file="<pathToVHD>"
+      DISKPART> detail vdisk
+      ```
+
+   - Examine o resultado do comando **detail** .  A saída incluirá um valor para **Tamanho virtual** .  Esse é o valor máximo atual.  Converta-o em megabytes.  O novo valor após o redimensionamento precisa ser maior que esse valor.  Por exemplo, se a saída de **detail** mostrar **Tamanho virtual: 256 GB** , você precisará especificar um valor maior que **256000** .  Quando você tiver o seu novo tamanho em megabytes, insira o seguinte comando em **diskpart** :
+
+      ```powershell
+      DISKPART> expand vdisk maximum=<sizeInMegaBytes>
+      ```
+
+   - Saia de **diskpart**
+
+      ```powershell
+      DISKPART> exit
+      ```
 
 5. Inicie sua distribuição do WSL (Ubuntu, por exemplo).
 
-6. Informe ao WSL que ele pode expandir o tamanho do sistema de arquivos executando esses comandos na linha de comando de distribuição do Linux:
-    - `sudo mount -t devtmpfs none /dev`
-    - `mount | grep ext4`
-    - Copie o nome dessa entrada, que terá a seguinte aparência: `/dev/sdXX` (com o X representando qualquer outro caractere)
-    - `sudo resize2fs /dev/sdXX`
-    - Use o valor que você copiou anteriormente. Talvez você também precise instalar o resize2fs: `apt install resize2fs`
+6. Informe ao WSL que ele pode expandir o tamanho do sistema de arquivos executando esses comandos na linha de comando de distribuição do Linux.
+
+   > [!NOTE]
+   > Você pode ver essa mensagem em resposta ao primeiro comando **mount** : **/dev: none already mounted on /dev** .  Essa mensagem pode ser ignorada com segurança.
+
+   ```powershell
+      sudo mount -t devtmpfs none /dev
+      mount | grep ext4
+   ```
+
+   Copie o nome dessa entrada, que terá a seguinte aparência: `/dev/sdX` (em que X representa qualquer outro caractere).  No seguinte exemplo, o valor de **X** é **b** :
+
+   ```powershell
+      sudo resize2fs /dev/sdb <sizeInMegabytes>M
+   ```
+
+   > [!NOTE]
+   > Talvez você também precise instalar o **resize2fs** .  Nesse caso, você pode usar esse comando para instalá-lo: `sudo apt install resize2fs`.
+
+   A saída terá esta aparência:
+
+   ```bash
+      resize2fs 1.44.1 (24-Mar-2018)
+      Filesystem at /dev/sdb is mounted on /; on-line resizing required
+      old_desc_blocks = 32, new_desc_blocks = 38
+      The filesystem on /dev/sdb is now 78643200 (4k) blocks long.
+      ```
 
 > [!NOTE]
 > em geral, não modifique, mova ou acesse os arquivos relacionados ao WSL localizados dentro da sua pasta AppData usando as ferramentas ou os editores do Windows. Isso pode fazer com que a distribuição do Linux fique corrompida.
