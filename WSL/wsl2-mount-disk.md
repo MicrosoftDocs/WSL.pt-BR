@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, Bash, disco, ext4, FileSys
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c67b0f34dcde925bb91979e9153049fdd474db3
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: 9ee71d7f76a9fd0e6b20293ef30b0808d56c43a1
+ms.sourcegitcommit: cfb6c254322b8eb9c2c26e19ce970d4c046bc352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211730"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035722"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Introdução à montagem de um disco do Linux no WSL 2 (visualização)
 
@@ -19,6 +19,7 @@ Se você quiser acessar um formato de disco do Linux que não tem suporte do Win
 Este tutorial abordará as etapas para identificar o disco e a partição que serão anexados ao WSL2, como montá-los e como acessá-los.
 
 > [!NOTE]
+> Você precisará estar no Windows 10 Build 20211 ou superior para acessar esse recurso. Você pode ingressar no [programa Windows insiders](https://insider.windows.com/) para obter as versões prévias mais recentes.
 > O acesso de administrador é necessário para anexar um disco ao WSL 2.
 
 ## <a name="identify-the-disk"></a>Identificar o disco
