@@ -2,15 +2,15 @@
 title: Solução de problemas do Subsistema Windows para Linux
 description: Fornece informações detalhadas sobre erros comuns e problemas que as pessoas têm ao executar o Linux no Subsistema Windows para Linux.
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
-ms.date: 01/20/2020
+ms.date: 09/28/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: c3becde51cf16b95f96222a08a2fe7249cd936c1
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: f7fdc6243e6cd5156bfae23fd7a1d61514449cf5
+ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211750"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92444789"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solução de problemas do Subsistema Windows para Linux
 
@@ -117,7 +117,7 @@ Você também pode acrescentar $PATH durante a atribuição da maneira abaixo, m
 
 Para obter mais informações, confira o problema [5296](https://github.com/microsoft/WSL/issues/5296) e o [5779](https://github.com/microsoft/WSL/issues/5779).
 
-### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>Habilite o recurso Plataforma de Máquina Virtual do Windows e verifique se a virtualização está habilitada na BIOS
+### <a name="error-0x80370102-the-virtual-machine-could-not-be-started-because-a-required-feature-is-not-installed"></a>"Error: 0x80370102. Não foi possível iniciar a máquina virtual porque um recurso necessário não está instalado. "
 
 Habilite o recurso Plataforma de Máquina Virtual do Windows e verifique se a virtualização está habilitada na BIOS.
 
@@ -361,3 +361,14 @@ options = metadata,uid=1000,gid=1000,umask=0022
 ```
 
 Ao adicionar esse comando, você incluirá metadados e modificará as permissões do arquivo nos arquivos Windows vistos em WSL. Confira as [Permissões do sistema de arquivos](./file-permissions.md) para saber mais.
+
+### <a name="running-windows-commands-fails-inside-a-distribution"></a>Ocorre uma falha na execução de comandos do Windows dentro de uma distribuição
+
+Algumas distribuições [disponíveis na Microsoft Store](install-win10.md#step-6---install-your-linux-distribution-of-choice) ainda não são totalmente compatíveis com a execução de comandos do Windows em um [Terminal](https://en.wikipedia.org/wiki/Linux_console) pronto para uso. Caso receba o erro `-bash: powershell.exe: command not found` ao executar `powershell.exe /c start .` ou outro comando do Windows, será possível resolvê-lo seguindo estas etapas:
+
+1. Na distribuição de WSL, execute `echo $PATH`.  
+   Caso ele não inclua `/mnt/c/Windows/system32`, isso significa que algo está redefinindo a variável PATH padrão.
+2. Verifique as configurações de perfil com `cat /etc/profile`.  
+   Caso ele contenha uma atribuição da variável PATH, edite o arquivo para fazer comentários no bloco de atribuição PATH com um caractere **#** .
+3. Verifique se wsl.conf está presente em `cat /etc/wsl.conf` e se não contém `appendWindowsPath=false`. Caso contrário, faça um comentário.
+4. Reinicie a distribuição digitando `wsl -t `, depois o nome da distribuição ou execute `wsl --shutdown` no cmd ou no PowerShell.

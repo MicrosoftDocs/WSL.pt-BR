@@ -1,17 +1,17 @@
 ---
 title: Comparação entre o WSL 2 e o WSL 1
-description: 'Compare as versões 1 e 2 do Subsistema do Windows para Linux. Saiba o que há de novo no WSL 2: kernel real do Linux, velocidade mais rápida, compatibilidade total com chamadas do sistema. O WSL 1 funcionará melhor se você estiver armazenando arquivos em sistemas de arquivos operacionais. Você pode expandir o tamanho do seu VHD (Disco Rígido Virtual) do WSL 2.'
-keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubuntu, debian, suse, windows 10, alterações do UX, WSL 2, kernel do linux, aplicativos de rede, localhost, IPv6, Disco Rígido Virtual, VHD, limitações do VHD, erro do VHD
-ms.date: 09/15/2020
+description: 'Compare as versões 1 e 2 do Subsistema do Windows para Linux. Saiba o que há de novo no WSL 2: kernel real do Linux, velocidade mais rápida, compatibilidade total com chamadas do sistema. O WSL 1 funcionará melhor se você estiver armazenando arquivos em sistemas de arquivos operacionais. Você pode expandir o tamanho do seu VHD (Disco de Hardware Virtual) do WSL 2.'
+keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubuntu, debian, suse, windows 10, UX changes, WSL 2, linux kernel, network applications, localhost, IPv6, Virtual Hardware Disk, VHD, VHD limitations, VHD error
+ms.date: 09/28/2020
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.custom: contperfq1
-ms.openlocfilehash: ce68a19da519ddae5dd562c75c9ba2bac3659190
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: 93fdbf87bf588a8b23aa917ea0cab05020e0ea3e
+ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211760"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92444865"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Comparação entre o WSL 1 e o WSL 2
 
@@ -49,7 +49,12 @@ Por exemplo, ao armazenar seus arquivos de projeto do WSL:
 - Use o diretório raiz do sistema de arquivos do Linux: `\\wsl$\Ubuntu-18.04\home\<user name>\Project`
 - Não o diretório raiz do sistema de arquivos do Windows: `C:\Users\<user name>\Project`
 
-Você pode acessar o sistema de arquivos raiz do Linux com aplicativos e ferramentas do Windows, como o Explorador de Arquivos. Tente abrir uma distribuição do Linux (como o Ubuntu), verifique se você está no diretório base do Linux digitando este comando: `cd ~`. Em seguida, abra o sistema de arquivos do Linux no Explorador de Arquivos digitando *(não se esqueça do ponto no final)* : `explorer.exe .`
+Todas as distribuições atualmente em execução (`wsl -l`) podem ser acessadas por meio de uma conexão de rede. Para isso, execute um comando \[WIN+R\] (atalho de teclado) ou digite `\\wsl$` na barra de endereços do Explorador de Arquivos para localizar os respectivos nomes de distribuição e acessar os sistemas de arquivos raiz.
+
+Também será possível usar comandos do Windows dentro do [Terminal](https://en.wikipedia.org/wiki/Linux_console) Linux do WSL. Tente abrir uma distribuição do Linux (como o Ubuntu) e verifique se você está no diretório base do Linux digitando este comando: `cd ~`. Em seguida, abra o sistema de arquivos do Linux no Explorador de Arquivos digitando *(não se esqueça do ponto no final)* : `powershell.exe /c start .`
+
+> [!IMPORTANT]
+> Caso encontre este erro: **-bash: powershell.exe: comando não encontrado** , veja a [página de solução de problemas de WSL](troubleshooting.md#running-windows-commands-fails-inside-a-distribution) para resolvê-lo.
 
 O WSL 2 só está disponível no Windows 10, versão 1903, Build 18362 ou superior. Verifique sua versão do Windows selecionando a **tecla do logotipo do Windows + R** , digite **winver** , selecione **OK** . (Ou digite o comando `ver` no prompt de comando do Windows). Você pode precisar [atualizar para a última versão do Windows](ms-settings:windowsupdate). Para builds inferiores ao 18362, não há nenhum suporte para o WSL.
 
