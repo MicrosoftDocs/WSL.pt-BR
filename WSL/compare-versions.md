@@ -6,19 +6,19 @@ ms.date: 09/28/2020
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.custom: contperfq1
-ms.openlocfilehash: 93fdbf87bf588a8b23aa917ea0cab05020e0ea3e
-ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
+ms.openlocfilehash: be0cd21b65705e455f29bfd1666ce74078a21baa
+ms.sourcegitcommit: cfb6c254322b8eb9c2c26e19ce970d4c046bc352
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92444865"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035732"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Comparação entre o WSL 1 e o WSL 2
 
 A principal diferença e os motivos para atualizar o Subsistema do Windows para Linux do WSL 1 para o WSL 2 são:
 
 - **aumentar o desempenho do sistema de arquivos** ,
-- **dar suporte à compatibilidade total com chamadas do sistema** .
+- **dar suporte à compatibilidade total com chamadas do sistema**.
 
 O WSL 2 usa a mais recente e melhor tecnologia de virtualização para executar um kernel do Linux dentro de uma VM (máquina virtual) do utilitário leve. No entanto, o WSL 2 não é uma experiência de VM tradicional.
 
@@ -56,7 +56,7 @@ Também será possível usar comandos do Windows dentro do [Terminal](https://en
 > [!IMPORTANT]
 > Caso encontre este erro: **-bash: powershell.exe: comando não encontrado** , veja a [página de solução de problemas de WSL](troubleshooting.md#running-windows-commands-fails-inside-a-distribution) para resolvê-lo.
 
-O WSL 2 só está disponível no Windows 10, versão 1903, Build 18362 ou superior. Verifique sua versão do Windows selecionando a **tecla do logotipo do Windows + R** , digite **winver** , selecione **OK** . (Ou digite o comando `ver` no prompt de comando do Windows). Você pode precisar [atualizar para a última versão do Windows](ms-settings:windowsupdate). Para builds inferiores ao 18362, não há nenhum suporte para o WSL.
+O WSL 2 só está disponível no Windows 10, versão 1903, Build 18362 ou superior. Verifique sua versão do Windows selecionando a **tecla do logotipo do Windows + R** , digite **winver** , selecione **OK**. (Ou digite o comando `ver` no prompt de comando do Windows). Você pode precisar [atualizar para a última versão do Windows](ms-settings:windowsupdate). Para builds inferiores ao 18362, não há nenhum suporte para o WSL.
 
 > [!NOTE]
 > O WSL 2 funcionará com o [VMware 15.5.5+](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) e o [VirtualBox 6+](https://www.virtualbox.org/wiki/Changelog-6.0). Saiba mais nas [Perguntas frequentes do WSL 2.](./wsl2-faq.md#will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox)
@@ -133,9 +133,10 @@ A imagem abaixo mostra um exemplo disso por meio da conexão com um servidor Nod
 ### <a name="accessing-windows-networking-apps-from-linux-host-ip"></a>Como acessar aplicativos de rede do Windows no Linux (IP do host)
 
 Se quiser acessar um aplicativo de rede em execução no Windows (por exemplo, um aplicativo em execução em um NodeJS ou SQL Server) de sua distribuição do Linux (por exemplo, Ubuntu), você precisará usar o endereço IP do seu computador host. Embora esse não seja um cenário comum, você pode seguir estas etapas para fazê-lo funcionar.
-    - Obtenha o endereço IP do seu computador host executando este comando da sua distribuição do Linux: `cat /etc/resolv.conf`
-    - Copie o endereço IP após o termo: `nameserver`.
-    - Conecte-se a qualquer servidor Windows usando o endereço IP copiado.
+
+1. Obtenha o endereço IP do seu computador host executando este comando da sua distribuição do Linux: `cat /etc/resolv.conf`
+2. Copie o endereço IP após o termo: `nameserver`.
+3. Conecte-se a qualquer servidor Windows usando o endereço IP copiado.
 
 A imagem abaixo mostra um exemplo disso por meio da conexão com um servidor Node.js em execução no Windows via curl.
 
@@ -167,7 +168,7 @@ Atualmente, as distribuições do WSL 2 não conseguem acessar endereços IPv6. 
 
 ## <a name="expanding-the-size-of-your-wsl-2-virtual-hard-disk"></a>Como expandir o tamanho do seu Disco Rígido Virtual do WSL 2
 
-O WSL 2 usa um VHD (Disco Rígido Virtual) para armazenar os seus arquivos do Linux. No WSL 2, um VHD é representado no seu disco rígido do Windows como um arquivo *.vhdx* .
+O WSL 2 usa um VHD (Disco Rígido Virtual) para armazenar os seus arquivos do Linux. No WSL 2, um VHD é representado no seu disco rígido do Windows como um arquivo *.vhdx*.
 
 O VHD do WSL 2 usa o sistema de arquivos ext4. Esse VHD é redimensionado automaticamente para atender às suas necessidades de armazenamento e tem um tamanho máximo inicial de 256 GB. Se o espaço de armazenamento exigido pelos seus arquivos do Linux exceder esse tamanho, talvez seja necessário expandi-lo. Se a sua distribuição aumentar de tamanho para exceder 256 GB, você verá erros informando que você ficou sem espaço em disco. Para corrigir esse erro, expanda o tamanho do VHD.
 
@@ -191,7 +192,7 @@ Para expandir o tamanho máximo do VHD para mais de 256 GB:
       DISKPART> detail vdisk
       ```
 
-   - Examine o resultado do comando **detail** .  A saída incluirá um valor para **Tamanho virtual** .  Esse é o valor máximo atual.  Converta-o em megabytes.  O novo valor após o redimensionamento precisa ser maior que esse valor.  Por exemplo, se a saída de **detail** mostrar **Tamanho virtual: 256 GB** , você precisará especificar um valor maior que **256000** .  Quando você tiver o seu novo tamanho em megabytes, insira o seguinte comando em **diskpart** :
+   - Examine o resultado do comando **detail**.  A saída incluirá um valor para **Tamanho virtual**.  Esse é o valor máximo atual.  Converta-o em megabytes.  O novo valor após o redimensionamento precisa ser maior que esse valor.  Por exemplo, se a saída de **detail** mostrar **Tamanho virtual: 256 GB** , você precisará especificar um valor maior que **256000**.  Quando você tiver o seu novo tamanho em megabytes, insira o seguinte comando em **diskpart** :
 
       ```powershell
       DISKPART> expand vdisk maximum=<sizeInMegaBytes>
@@ -208,7 +209,7 @@ Para expandir o tamanho máximo do VHD para mais de 256 GB:
 6. Informe ao WSL que ele pode expandir o tamanho do sistema de arquivos executando esses comandos na linha de comando de distribuição do Linux.
 
    > [!NOTE]
-   > Você pode ver essa mensagem em resposta ao primeiro comando **mount** : **/dev: none already mounted on /dev** .  Essa mensagem pode ser ignorada com segurança.
+   > Você pode ver essa mensagem em resposta ao primeiro comando **mount** : **/dev: none already mounted on /dev**.  Essa mensagem pode ser ignorada com segurança.
 
    ```powershell
       sudo mount -t devtmpfs none /dev
@@ -222,7 +223,7 @@ Para expandir o tamanho máximo do VHD para mais de 256 GB:
    ```
 
    > [!NOTE]
-   > Talvez você também precise instalar o **resize2fs** .  Nesse caso, você pode usar esse comando para instalá-lo: `sudo apt install resize2fs`.
+   > Talvez você também precise instalar o **resize2fs**.  Nesse caso, você pode usar esse comando para instalá-lo: `sudo apt install resize2fs`.
 
    A saída terá esta aparência:
 
