@@ -4,12 +4,12 @@ description: Listagem de referência e configuração de várias distribuições
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 73544d4d8c8eda462194f213a0f093b21ab6d90e
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: 2a26795821162e91cb87825483426cd58aab8ac6
+ms.sourcegitcommit: cc81ebc749cf84dd58e9f57ee4cc72b5c72be1fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413317"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93352659"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>Comandos do WSL e configurações de inicialização
 
@@ -267,7 +267,7 @@ Seção: `[automount]`
 
 Por padrão, o WSL define o UID e o GID como o valor do usuário padrão (na distribuição do Ubuntu, o usuário padrão é criado com UID = 1.000, GID = 1.000). Se o usuário especificar uma opção GID ou UID explicitamente por meio dessa chave, o valor associado será substituído. Caso contrário, o valor padrão será sempre acrescentado.
 
-**Observação**: Essas opções são aplicadas como opções de montagem para todas as unidades montadas automaticamente. Para alterar as opções somente para uma unidade específica, use/etc/fstab.
+**Observação** : Essas opções são aplicadas como opções de montagem para todas as unidades montadas automaticamente. Para alterar as opções somente para uma unidade específica, use/etc/fstab.
 
 #### <a name="mount-options"></a>Opções de montagem
 
@@ -280,17 +280,18 @@ A configuração de diferentes opções de montagem para unidades do Windows (Dr
 |umask | Uma máscara octal de permissões a serem excluídas para todos os arquivos e diretórios | 000
 |fmask | Uma máscara octal de permissões a serem excluídas para todos os arquivos | 000
 |dmask | Uma máscara octal de permissões a serem excluídas para todos os diretórios | 000
+|metadata | Se os metadados são adicionados aos arquivos do Windows para dar suporte às permissões do sistema Linux | Habilitado
 
-**Observação**: as máscaras de permissão passam por uma operação OR lógica antes de serem aplicadas a arquivos ou diretórios. 
+**Observação:** As máscaras de permissão são colocadas por meio de uma operação OR lógica antes de serem aplicadas a arquivos ou diretórios. 
 
-#### <a name="network"></a>rede
+#### <a name="network"></a>network
 
 Rótulo da seção: `[network]`
 
-| key | value | default | observações|
+| chave | value | default | HDInsight|
 |:----|:----|:----|:----|
-| generateHosts | booliano | `true` | O `true` define o WSL para gerar `/etc/hosts`. O arquivo `hosts` contém um mapa estático do endereço IP correspondente de nomes de host. |
-| generateResolvConf | booliano | `true` | O `true` define o WSL para gerar `/etc/resolv.conf`. O `resolv.conf` contém uma lista DNS que é capaz de resolver um determinado nome de host para seu endereço IP. | 
+| generateHosts | booleano | `true` | O `true` define o WSL para gerar `/etc/hosts`. O arquivo `hosts` contém um mapa estático do endereço IP correspondente de nomes de host. |
+| generateResolvConf | booleano | `true` | O `true` define o WSL para gerar `/etc/resolv.conf`. O `resolv.conf` contém uma lista DNS que é capaz de resolver um determinado nome de host para seu endereço IP. | 
 
 #### <a name="interop"></a>interop
 
@@ -298,10 +299,10 @@ Rótulo da seção: `[interop]`
 
 Essas opções estão disponíveis no Insider Build 17713 e posterior.
 
-| key | value | default | observações|
+| chave | value | default | HDInsight|
 |:----|:----|:----|:----|
-| habilitado | booliano | `true` | Definir essa chave determinará se o WSL dará suporte à inicialização de processos do Windows. |
-| appendWindowsPath | booliano | `true` | Definir essa chave determinará se o WSL adicionará elementos de caminho do Windows à variável de ambiente $PATH. |
+| Habilitado | booliano | `true` | Definir essa chave determinará se o WSL dará suporte à inicialização de processos do Windows. |
+| appendWindowsPath | booleano | `true` | Definir essa chave determinará se o WSL adicionará elementos de caminho do Windows à variável de ambiente $PATH. |
 
 #### <a name="user"></a>usuário
 
@@ -309,9 +310,9 @@ Rótulo da seção: `[user]`
 
 Essas opções estão disponíveis no Build 18980 e posterior.
 
-| chave | value | padrão | HDInsight|
+| chave | value | default | HDInsight|
 |:----|:----|:----|:----|
-| padrão | string | O nome de usuário inicial criado na primeira execução | Definir essa chave especifica qual usuário executar como ao iniciar pela primeira vez uma sessão WSL. |
+| default | string | O nome de usuário inicial criado na primeira execução | Definir essa chave especifica qual usuário executar como ao iniciar pela primeira vez uma sessão WSL. |
 
 ## <a name="configure-global-options-with-wslconfig"></a>Configurar opções globais com. wslconfig
 
@@ -336,7 +337,7 @@ Rótulo da seção: `[wsl2]`
 
 Essas configurações afetam a VM que alimenta qualquer distribuição WSL 2.
 
-| chave | value | padrão | HDInsight|
+| chave | value | default | HDInsight|
 |:----|:----|:----|:----|
 | kernel | string | A caixa de entrada fornecida pelo kernel criado pela Microsoft | Um caminho absoluto do Windows para um kernel personalizado do Linux. |
 | memória | tamanho | 50% da memória total no Windows ou 8 GB, o que for menor; em builds antes de 20175:80% da memória total no Windows | A quantidade de memória a ser atribuída à VM WSL 2. |

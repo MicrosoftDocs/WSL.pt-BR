@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, Bash, disco, ext4, FileSys
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ee71d7f76a9fd0e6b20293ef30b0808d56c43a1
-ms.sourcegitcommit: cfb6c254322b8eb9c2c26e19ce970d4c046bc352
+ms.openlocfilehash: 5d996586baf5e22cc557c27c6f54b2cb1a91dc4b
+ms.sourcegitcommit: cc81ebc749cf84dd58e9f57ee4cc72b5c72be1fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035722"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93352649"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Introdução à montagem de um disco do Linux no WSL 2 (visualização)
 
@@ -169,6 +169,18 @@ Se `Diskpath` for omitido, todos os discos anexados serão desmontados e desanex
 
 > [!NOTE]
 > Se um disco falhar ao desmontar, o WSL 2 poderá ser forçado a sair executando `wsl --shutdown` , o que desanexará o disco.
+
+## <a name="mount-a-vhd-in-wsl"></a>Montar um VHD no WSL
+
+Você também pode montar arquivos de disco rígido virtual (VHD) em WSL usando `wsl --mount` . Para fazer isso, primeiro você precisa montar o VHD no Windows usando o [`Mount-VHD`](https://docs.microsoft.com/powershell/module/hyper-v/mount-vhd) comando no Windows. Certifique-se de executar esse comando em uma janela com privilégios de administrador. Abaixo está um exemplo em que usamos esse comando e também geramos o caminho do disco 
+
+```powershell
+Write-Output "\.\\PhysicalDrive$((Mount-VHD -Path .\ext4.vhdx -PassThru | Get-Disk).Number)"
+```
+
+Você pode usar a saída acima para obter o caminho do disco para esse VHD e montá-lo em WSL seguindo as instruções na seção anterior.
+
+Você também pode usar essa técnica para montar e interagir com os discos rígidos virtuais de outros WSL distribuições, já que cada WSL 2 distribuição é armazenado por meio de um arquivo de disco rígido virtual chamado: `ext4.vhdx` . Por padrão, os VHDs para WSL 2 distribuições são armazenados neste caminho: `C:\Users\[user]\AppData\Local\Packages\[distro]\LocalState\[distroPackageName]` , tenha cuidado ao acessar esses arquivos de sistema, esse é um fluxo de trabalho de usuário avançado.
 
 ## <a name="limitations"></a>Limitações
 
