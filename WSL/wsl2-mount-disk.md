@@ -2,15 +2,15 @@
 title: Introdução à montagem de um disco do Linux no WSL 2 (visualização)
 description: Saiba como configurar uma montagem de disco no WSL 2 e como acessá-la.
 keywords: WSL, Windows, windowssubsystem, GNU, Linux, Bash, disco, ext4, FileSystem, Mount
-ms.date: 06/08/2020
+ms.date: 11/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d996586baf5e22cc557c27c6f54b2cb1a91dc4b
-ms.sourcegitcommit: cc81ebc749cf84dd58e9f57ee4cc72b5c72be1fd
+ms.openlocfilehash: 828f796839ff272261e98e88ca54a1af76471958
+ms.sourcegitcommit: 70ce8f7472167b6d8d760d0c54dbaab67904f2a4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93352649"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93413681"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Introdução à montagem de um disco do Linux no WSL 2 (visualização)
 
@@ -103,7 +103,7 @@ wsl --unmount <DiskPath>
 
 ## <a name="command-line-reference"></a>Referência de linha de comando
 
-### <a name="mouting-a-specific-filesystem"></a>Montagem um sistema de arquivos específico
+### <a name="mounting-a-specific-filesystem"></a>Montando um sistema de arquivos específico
 
 Por padrão, o WSL 2 tentará montar o dispositivo como ext4. Para especificar outro sistema de arquivos, execute:
 
@@ -120,7 +120,7 @@ wsl --mount <Diskpath> -t vfat
 > [!NOTE]
 > Para listar os sistemas de filedisponíveis no WSL2, execute: `cat /proc/filesystems`
 
-### <a name="mouting-a-specific-partition"></a>Montagem uma partição específica
+### <a name="mounting-a-specific-partition"></a>Montando uma partição específica
 
 Por padrão, o WSL 2 tenta montar o disco inteiro. Para montar uma partição específica, execute:
 
