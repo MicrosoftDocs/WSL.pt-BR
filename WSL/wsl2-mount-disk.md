@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, Bash, disco, ext4, FileSys
 ms.date: 11/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: eed435c70cc429f7b787af187da9181b6f03eb8b
-ms.sourcegitcommit: 05e20f93e07518a9fbc8a66bad9b566618637cac
+ms.openlocfilehash: 165ae828b7fe83cae70a477d6143999da4265e3f
+ms.sourcegitcommit: 8b22f057a2f39c86bbede43fd65e8001c99548da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/18/2020
-ms.locfileid: "94846244"
+ms.locfileid: "94870537"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Introdução à montagem de um disco do Linux no WSL 2 (visualização)
 
@@ -172,10 +172,10 @@ Se `Diskpath` for omitido, todos os discos anexados serão desmontados e desanex
 
 ## <a name="mount-a-vhd-in-wsl"></a>Montar um VHD no WSL
 
-Você também pode montar arquivos de disco rígido virtual (VHD) em WSL usando `wsl --mount` . Para fazer isso, primeiro você precisa montar o VHD no Windows usando o [`Mount-VHD`](https://docs.microsoft.com/powershell/module/hyper-v/mount-vhd) comando no Windows. Certifique-se de executar esse comando em uma janela com privilégios de administrador. Abaixo está um exemplo em que usamos esse comando e também geramos o caminho do disco 
+Você também pode montar arquivos de disco rígido virtual (VHD) em WSL usando `wsl --mount` . Para fazer isso, primeiro você precisa montar o VHD no Windows usando o [`Mount-VHD`](https://docs.microsoft.com/powershell/module/hyper-v/mount-vhd) comando no Windows. Certifique-se de executar esse comando em uma janela com privilégios de administrador. Abaixo está um exemplo em que usamos esse comando e também geramos o caminho do disco. Certifique-se de substituir `<pathToVHD>` pelo seu caminho VHD real. 
 
 ```powershell
-Write-Output "\\.\PhysicalDrive$((Mount-VHD -Path .\ext4.vhdx -PassThru | Get-Disk).Number)"
+Write-Output "\\.\PhysicalDrive$((Mount-VHD -Path <pathToVHD> -PassThru | Get-Disk).Number)"
 ```
 
 Você pode usar a saída acima para obter o caminho do disco para esse VHD e montá-lo em WSL seguindo as instruções na seção anterior.
