@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 09/28/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f7fdc6243e6cd5156bfae23fd7a1d61514449cf5
-ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
+ms.openlocfilehash: bb9beb75d09c4ca51ae4764d2e4cc6125a9de923
+ms.sourcegitcommit: 59aff996af4bbac5698573d58bbed6537cfb47ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92444789"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933281"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solução de problemas do Subsistema Windows para Linux
 
@@ -270,7 +270,7 @@ Para coletar um despejo de memória
 Para encontrar a arquitetura do seu PC e o número de build do Windows, abra  
 **Configurações** > **Sistema** > **Sobre**
 
-Procure os campos **Build do SO** e **Tipo de Sistema** .  
+Procure os campos **Build do SO** e **Tipo de Sistema**.  
     ![Captura de tela dos campos Build e Tipo de Sistema](media/system.png)
 
 Para localizar o número de build do Windows Server, execute o seguinte no PowerShell:  
@@ -372,3 +372,7 @@ Algumas distribuições [disponíveis na Microsoft Store](install-win10.md#step-
    Caso ele contenha uma atribuição da variável PATH, edite o arquivo para fazer comentários no bloco de atribuição PATH com um caractere **#** .
 3. Verifique se wsl.conf está presente em `cat /etc/wsl.conf` e se não contém `appendWindowsPath=false`. Caso contrário, faça um comentário.
 4. Reinicie a distribuição digitando `wsl -t `, depois o nome da distribuição ou execute `wsl --shutdown` no cmd ou no PowerShell.
+
+### <a name="unable-to-boot-after-installing-wsl-2"></a>Não foi possível realizar a inicialização após a instalação do WSL 2
+
+Estamos cientes de um problema que afeta os usuários, no qual eles não conseguem realizar a inicialização após a instalação do WSL 2. Embora possamos diagnosticar totalmente esses problemas, os usuários relataram que [alterar o tamanho do buffer](https://github.com/microsoft/WSL/issues/4784#issuecomment-639219363) ou [instalar os drivers corretos](https://github.com/microsoft/WSL/issues/4784#issuecomment-675702244) pode ajudar a resolver isso. Exiba este [problema do GitHub](https://github.com/microsoft/WSL/issues/4784) para conferir as atualizações mais recentes sobre esse problema. 

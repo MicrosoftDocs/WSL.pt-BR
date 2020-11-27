@@ -5,12 +5,12 @@ keywords: wsl, windows, linux kernel, windows subsystem for linux, kernel
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 7bf2ef606d0bd23083f323117348aeea87c52b10
-ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
+ms.openlocfilehash: 4ca1bde2f8dc36c85b0c998c01f7f77eafe5f695
+ms.sourcegitcommit: fef5def707ccec57d6f0c5e9c89680754ea06411
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92444802"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95416643"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>Atualizar o kernel do WSL 2 Linux
 
@@ -47,8 +47,9 @@ Para instalar o kernel do MSI, o WSL é necessário e deve ser habilitado primei
 
 Há três motivos possíveis para você ver essa mensagem:
 
-1. Você ainda está usando uma versão antiga do Windows, que não dá suporte ao WSL 2. Verifique os [requisitos do WSL 2](https://docs.microsoft.com/windows/wsl/install-win10#update-to-wsl-2) e faça as atualizações necessárias para usá-lo. 
-2. O `Windows Subsystem for Linux` não está habilitado. Siga o [guia de instalação do Subsistema do Windows para Linux](https://docs.microsoft.com/windows/wsl/install-win10).
+1. Você ainda está usando uma versão antiga do Windows, que não dá suporte ao WSL 2. Verifique os [requisitos do WSL 2](./install-win10.md#step-2---update-to-wsl-2) e faça as atualizações necessárias para usá-lo 
+2. 
+2. O `Windows Subsystem for Linux` não está habilitado. Siga o [guia de instalação do Subsistema do Windows para Linux](./install-win10.md#step-1---enable-the-windows-subsystem-for-linux).
 3. Depois que você habilitar o `Windows Subsystem for Linux`, uma reinicialização será necessária para que ele entre em vigor. Reinicialize o computador e tente novamente.
 
 ### `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`

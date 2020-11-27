@@ -5,18 +5,32 @@ keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, window
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: cf349615dc40f1912fdb4dff3f5593627fa246e6
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: 4e2ec7fdac4f4a0c9106edeedbaea80e4dc09165
+ms.sourcegitcommit: fef5def707ccec57d6f0c5e9c89680754ea06411
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211770"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95416653"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guia de instalação do Subsistema Windows para Linux para Windows 10
 
 ## <a name="install-windows-subsystem-for-linux"></a>Instalar o Subsistema do Windows para Linux
 
 O Subsistema do Windows para Linux tem duas versões diferentes que podem ser escolhidas durante o processo de instalação. O WSL 2 tem melhor desempenho geral e é recomendável usá-lo. Se o seu sistema não der suporte ao WSL 2 ou se você tiver uma situação específica que exija o armazenamento de arquivos entre sistemas, talvez você queira continuar com o WSL 1. Leia mais sobre a [Comparação entre o WSL 2 e o WSL 1](./compare-versions.md).
+
+> [!NOTE]
+> Para usar o novo comando `wsl --install` e ignorar as etapas 1-6 abaixo, você precisa adicionar o [Programa Windows Insider](https://insider.windows.com/getting-started) e instalar uma versão prévia do build do Windows 10 (build do sistema operacional 20262 ou superior). 
+>
+> Depois da instalação da versão prévia do build, você conseguirá abrir uma janela de prompt de comando com privilégios de administrador e executar `wsl --install`. Isso habilitará automaticamente os componentes opcionais do WSL e da Plataforma de Máquina Virtual, baixará e instalará o kernel do Linux mais recente, definirá o WSL 2 como o padrão e baixará o Ubuntu (isso pode ser alterado usando `wsl --install -d Debian` como um exemplo, digite `wsl --list --online` para ver uma lista de distribuições do Linux disponíveis). Depois que o comando for concluído, você terá que reiniciar o sistema. Após a reinicialização, a distribuição do Linux (Ubuntu por padrão) conclui a instalação e abre uma linha de comando do Linux para que você comece a usá-lo. Você pode pular para a [Etapa 7 – Configurar uma nova distribuição](./install-win10.md#step-7---set-up-a-new-distribution).
+
+### <a name="install-steps"></a>Etapas de instalação
+
+- Abra uma janela de comando com privilégios de Administrador
+- Execute `wsl.exe --install`
+- Reinicie o computador se for necessário e direcionado pelo comando
+- Após a reinicialização, a instalação será concluída e você estará pronto para começar a usar o WSL!
+
+Isso instalará a distribuição do Ubuntu. Você também pode instalar outras distribuições aprovando argumentos, por exemplo: `wsl --install -d Debian` instalará o Debian. A execução de `wsl --list --online` mostrará uma lista de distribuições disponíveis. 
 
 ## <a name="step-1---enable-the-windows-subsystem-for-linux"></a>Etapa 1 – Habilitar o Subsistema do Windows para Linux
 
@@ -40,14 +54,14 @@ Para atualizar para o WSL 2, você precisa estar executando o Windows 10.
 - Para sistemas ARM64: **Versão 2004** ou superiores, com o **Build 19041** ou superiores.
 - Os builds inferiores a 18362 não dão suporte a WSL 2. Use o [Assistente do Windows Update](https://www.microsoft.com/software-download/windows10) para atualizar a sua versão do Windows.
 
-Para verificar a sua versão e o número de build, selecione a **tecla do logotipo do Windows + R** , digite **winver** e selecione **OK** . (Ou digite o comando `ver` no prompt de comando do Windows). [Atualize para a versão mais recente do Windows](ms-settings:windowsupdate) no menu Configurações.
+Para verificar a sua versão e o número de build, selecione a **tecla do logotipo do Windows + R**, digite **winver** e selecione **OK**. (Ou digite o comando `ver` no prompt de comando do Windows). [Atualize para a versão mais recente do Windows](ms-settings:windowsupdate) no menu Configurações.
 
 > [!NOTE]
 > Se você estiver executando o Windows 10 versão 1903 ou 1909, abra "Configurações" no menu do Windows, navegue até "Atualizações e Segurança" e selecione "Verificar Atualizações". O número de Build precisa ser 18362.1049+ ou 18363.1049+ e o nº do build secundário deve ser maior que .1049. Leia mais: [O suporte a WSL 2 estará disponível em breve nas Versões 1903 e 1909 do Windows 10](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/). Confira as [instruções de solução de problemas](./troubleshooting.md#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2).
 
 ## <a name="step-3---enable-virtual-machine-feature"></a>Etapa 3 – Habilitar o recurso de Máquina Virtual
 
-Antes de instalar o WSL 2, você precisa habilitar o recurso opcional **Plataforma de Máquina Virtual** .
+Antes de instalar o WSL 2, você precisa habilitar o recurso opcional **Plataforma de Máquina Virtual**.
 
 Abra o PowerShell como administrador e execute:
 
