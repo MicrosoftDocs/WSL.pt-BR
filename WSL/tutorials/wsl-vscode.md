@@ -5,16 +5,16 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, Bash, vs Code, extensão r
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b39b34644040354df44bf62ec7b878e3f5d667e6
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: 528c2b040136518f9c7d04d8572cd0f08bb68385
+ms.sourcegitcommit: d5d3dd8b91e93d46653f9512bceafd8b5340255f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413337"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443763"
 ---
 # <a name="get-started-using-visual-studio-code-with-windows-subsystem-for-linux"></a>Introdução ao uso de Visual Studio Code com o subsistema do Windows para Linux
 
-Visual Studio Code, juntamente com a extensão Remote-WSL, permite que você use o WSL como seu ambiente de desenvolvimento em tempo integral diretamente do VS Code. Você pode:
+Visual Studio Code, juntamente com a extensão Remote-WSL, permite que você use o WSL como seu ambiente de desenvolvimento em tempo integral diretamente do VS Code. Você poderá:
 
 * desenvolva em um ambiente baseado em Linux
 * usar cadeias e utilitários específicos do Linux
@@ -62,7 +62,7 @@ Para abrir um projeto da sua distribuição do WSL, abra a linha de comando da d
 
 ### <a name="from-vs-code"></a>De VS Code
 
-Você também pode acessar mais VS Code opções remotas usando o atalho: `CTRL+SHIFT+P` em vs Code para abrir a paleta de comandos. Se você digitar, `VSCODE-REMOTE` verá todas as vs Code opções remotas disponíveis, permitindo que você reabra a pasta em uma sessão remota, especifique a distribuição que deseja abrir e muito mais.
+Você também pode acessar mais VS Code opções remotas usando o atalho: `CTRL+SHIFT+P` em vs Code para abrir a paleta de comandos. Se você digitar, `Remote-WSL` verá uma lista das vs Code opções remotas disponíveis, permitindo que você reabra a pasta em uma sessão remota, especifique a distribuição que deseja abrir e muito mais.
 
 ![Paleta de comandos do VS Code](../media/vscode-remote-command-palette.png)
 
