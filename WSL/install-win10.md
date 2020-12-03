@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, window
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 4e2ec7fdac4f4a0c9106edeedbaea80e4dc09165
-ms.sourcegitcommit: fef5def707ccec57d6f0c5e9c89680754ea06411
+ms.openlocfilehash: 248afa4695cdfdf34dd44dd0692d2cba42c32a0b
+ms.sourcegitcommit: 291c6767954e3d5034ea0099e5c1e1f1ea5b577d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95416653"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96470488"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guia de instalação do Subsistema Windows para Linux para Windows 10
 
@@ -74,10 +74,10 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 ## <a name="step-4---download-the-linux-kernel-update-package"></a>Etapa 4 – Baixar o pacote de atualização do kernel do Linux
 
 1. Baixar o pacote mais recente:
-    - [Pacote de atualização do kernel do Linux do WSL2 para computadores x64](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+    - [Pacote de atualização do kernel do Linux do WSL2 para computadores x64](http://aka.ms/wsl2kernelmsix64)
 
     > [!NOTE]
-    > Se estiver usando um computador ARM64, baixe o [pacote ARM64](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi). Se você não tiver certeza do tipo do seu computador, abra o Prompt de Comando ou o PowerShell e insira: `systeminfo | find "System Type"`.
+    > Se estiver usando um computador ARM64, baixe o [pacote ARM64](http://aka.ms/wsl2kernelmsiarm64). Se você não tiver certeza do tipo do seu computador, abra o Prompt de Comando ou o PowerShell e insira: `systeminfo | find "System Type"`.
 
 2. Execute o pacote de atualização baixado na etapa anterior. (Clique duas vezes para executar. Você receberá uma solicitação para fornecer permissões elevadas; selecione 'sim' para aprovar essa instalação.)
 

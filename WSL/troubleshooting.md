@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 09/28/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bb9beb75d09c4ca51ae4764d2e4cc6125a9de923
-ms.sourcegitcommit: 59aff996af4bbac5698573d58bbed6537cfb47ef
+ms.openlocfilehash: f4040cbe9faf5d55324b56974dd5677052224dd1
+ms.sourcegitcommit: d5d3dd8b91e93d46653f9512bceafd8b5340255f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933281"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443753"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solução de problemas do Subsistema Windows para Linux
 
@@ -297,7 +297,7 @@ Falha ao tentar conectar seu servidor SSH com o seguinte erro: "Conexão encerra
    sudo service ssh status
    ```
 
-   e que você seguiu este tutorial: https://help.ubuntu.com/lts/serverguide/openssh-server.html.en
+   e que você seguiu este tutorial: https://ubuntu.com/server/docs/service-openssh
 
 2. Interrompa o serviço SSHD e inicie o SSHD no modo de depuração:
 
