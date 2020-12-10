@@ -5,19 +5,19 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubunt
 ms.date: 09/28/2020
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.custom: contperfq1
-ms.openlocfilehash: be0cd21b65705e455f29bfd1666ce74078a21baa
-ms.sourcegitcommit: cfb6c254322b8eb9c2c26e19ce970d4c046bc352
+ms.custom: contperf-fy21q1
+ms.openlocfilehash: ff2c9bc08b4fdfe8862f7d65fc5861fa242efef7
+ms.sourcegitcommit: c92245ab2b763d6a357210a9b4470a0cafd786a6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035732"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96857593"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Comparação entre o WSL 1 e o WSL 2
 
 A principal diferença e os motivos para atualizar o Subsistema do Windows para Linux do WSL 1 para o WSL 2 são:
 
-- **aumentar o desempenho do sistema de arquivos** ,
+- **aumentar o desempenho do sistema de arquivos**,
 - **dar suporte à compatibilidade total com chamadas do sistema**.
 
 O WSL 2 usa a mais recente e melhor tecnologia de virtualização para executar um kernel do Linux dentro de uma VM (máquina virtual) do utilitário leve. No entanto, o WSL 2 não é uma experiência de VM tradicional.
@@ -54,9 +54,9 @@ Todas as distribuições atualmente em execução (`wsl -l`) podem ser acessadas
 Também será possível usar comandos do Windows dentro do [Terminal](https://en.wikipedia.org/wiki/Linux_console) Linux do WSL. Tente abrir uma distribuição do Linux (como o Ubuntu) e verifique se você está no diretório base do Linux digitando este comando: `cd ~`. Em seguida, abra o sistema de arquivos do Linux no Explorador de Arquivos digitando *(não se esqueça do ponto no final)* : `powershell.exe /c start .`
 
 > [!IMPORTANT]
-> Caso encontre este erro: **-bash: powershell.exe: comando não encontrado** , veja a [página de solução de problemas de WSL](troubleshooting.md#running-windows-commands-fails-inside-a-distribution) para resolvê-lo.
+> Caso encontre este erro: **-bash: powershell.exe: comando não encontrado**, veja a [página de solução de problemas de WSL](troubleshooting.md#running-windows-commands-fails-inside-a-distribution) para resolvê-lo.
 
-O WSL 2 só está disponível no Windows 10, versão 1903, Build 18362 ou superior. Verifique sua versão do Windows selecionando a **tecla do logotipo do Windows + R** , digite **winver** , selecione **OK**. (Ou digite o comando `ver` no prompt de comando do Windows). Você pode precisar [atualizar para a última versão do Windows](ms-settings:windowsupdate). Para builds inferiores ao 18362, não há nenhum suporte para o WSL.
+O WSL 2 só está disponível no Windows 10, versão 1903, Build 18362 ou superior. Verifique sua versão do Windows selecionando a **tecla do logotipo do Windows + R**, digite **winver**, selecione **OK**. (Ou digite o comando `ver` no prompt de comando do Windows). Você pode precisar [atualizar para a última versão do Windows](ms-settings:windowsupdate). Para builds inferiores ao 18362, não há nenhum suporte para o WSL.
 
 > [!NOTE]
 > O WSL 2 funcionará com o [VMware 15.5.5+](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) e o [VirtualBox 6+](https://www.virtualbox.org/wiki/Changelog-6.0). Saiba mais nas [Perguntas frequentes do WSL 2.](./wsl2-faq.md#will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox)
@@ -192,7 +192,7 @@ Para expandir o tamanho máximo do VHD para mais de 256 GB:
       DISKPART> detail vdisk
       ```
 
-   - Examine o resultado do comando **detail**.  A saída incluirá um valor para **Tamanho virtual**.  Esse é o valor máximo atual.  Converta-o em megabytes.  O novo valor após o redimensionamento precisa ser maior que esse valor.  Por exemplo, se a saída de **detail** mostrar **Tamanho virtual: 256 GB** , você precisará especificar um valor maior que **256000**.  Quando você tiver o seu novo tamanho em megabytes, insira o seguinte comando em **diskpart** :
+   - Examine o resultado do comando **detail**.  A saída incluirá um valor para **Tamanho virtual**.  Esse é o valor máximo atual.  Converta-o em megabytes.  O novo valor após o redimensionamento precisa ser maior que esse valor.  Por exemplo, se a saída de **detail** mostrar **Tamanho virtual: 256 GB**, você precisará especificar um valor maior que **256000**.  Quando você tiver o seu novo tamanho em megabytes, insira o seguinte comando em **diskpart**:
 
       ```powershell
       DISKPART> expand vdisk maximum=<sizeInMegaBytes>
@@ -209,14 +209,14 @@ Para expandir o tamanho máximo do VHD para mais de 256 GB:
 6. Informe ao WSL que ele pode expandir o tamanho do sistema de arquivos executando esses comandos na linha de comando de distribuição do Linux.
 
    > [!NOTE]
-   > Você pode ver essa mensagem em resposta ao primeiro comando **mount** : **/dev: none already mounted on /dev**.  Essa mensagem pode ser ignorada com segurança.
+   > Você pode ver essa mensagem em resposta ao primeiro comando **mount**: **/dev: none already mounted on /dev**.  Essa mensagem pode ser ignorada com segurança.
 
    ```powershell
       sudo mount -t devtmpfs none /dev
       mount | grep ext4
    ```
 
-   Copie o nome dessa entrada, que terá a seguinte aparência: `/dev/sdX` (em que X representa qualquer outro caractere).  No seguinte exemplo, o valor de **X** é **b** :
+   Copie o nome dessa entrada, que terá a seguinte aparência: `/dev/sdX` (em que X representa qualquer outro caractere).  No seguinte exemplo, o valor de **X** é **b**:
 
    ```powershell
       sudo resize2fs /dev/sdb <sizeInMegabytes>M
