@@ -5,32 +5,60 @@ keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, window
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 248afa4695cdfdf34dd44dd0692d2cba42c32a0b
-ms.sourcegitcommit: 291c6767954e3d5034ea0099e5c1e1f1ea5b577d
+ms.openlocfilehash: f5cf426ee50bde3c21929add0682e17b707288f9
+ms.sourcegitcommit: 52eb0d4f669954a61e199f9222062d2a519378f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96470488"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96760864"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guia de instalação do Subsistema Windows para Linux para Windows 10
 
-## <a name="install-windows-subsystem-for-linux"></a>Instalar o Subsistema do Windows para Linux
+Há duas opções disponíveis para instalar o WSL (Subsistema do Windows para Linux):
 
-O Subsistema do Windows para Linux tem duas versões diferentes que podem ser escolhidas durante o processo de instalação. O WSL 2 tem melhor desempenho geral e é recomendável usá-lo. Se o seu sistema não der suporte ao WSL 2 ou se você tiver uma situação específica que exija o armazenamento de arquivos entre sistemas, talvez você queira continuar com o WSL 1. Leia mais sobre a [Comparação entre o WSL 2 e o WSL 1](./compare-versions.md).
+- **[Instalação simplificada](#simplified-installation-for-windows-insiders)** *(versão prévia)* : `wsl --install`
 
-> [!NOTE]
-> Para usar o novo comando `wsl --install` e ignorar as etapas 1-6 abaixo, você precisa adicionar o [Programa Windows Insider](https://insider.windows.com/getting-started) e instalar uma versão prévia do build do Windows 10 (build do sistema operacional 20262 ou superior). 
->
-> Depois da instalação da versão prévia do build, você conseguirá abrir uma janela de prompt de comando com privilégios de administrador e executar `wsl --install`. Isso habilitará automaticamente os componentes opcionais do WSL e da Plataforma de Máquina Virtual, baixará e instalará o kernel do Linux mais recente, definirá o WSL 2 como o padrão e baixará o Ubuntu (isso pode ser alterado usando `wsl --install -d Debian` como um exemplo, digite `wsl --list --online` para ver uma lista de distribuições do Linux disponíveis). Depois que o comando for concluído, você terá que reiniciar o sistema. Após a reinicialização, a distribuição do Linux (Ubuntu por padrão) conclui a instalação e abre uma linha de comando do Linux para que você comece a usá-lo. Você pode pular para a [Etapa 7 – Configurar uma nova distribuição](./install-win10.md#step-7---set-up-a-new-distribution).
+    O comando de instalação simplificada de `wsl --install` requer que você entre no [Programa Windows Insiders](https://insider.windows.com/getting-started) e instale uma versão prévia do Windows 10 (build do sistema operacional 20262 ou superior), mas elimina a necessidade de seguir as etapas de instalação manual. Tudo o que você precisa fazer é abrir uma janela de comando com privilégios de administrador e executar `wsl --install`. Após uma reinicialização, você estará pronto para usar o WSL.
 
-### <a name="install-steps"></a>Etapas de instalação
+- **[Instalação manual](#manual-installation-steps)** : Siga as seis etapas listadas abaixo.
 
-- Abra uma janela de comando com privilégios de Administrador
-- Execute `wsl.exe --install`
-- Reinicie o computador se for necessário e direcionado pelo comando
-- Após a reinicialização, a instalação será concluída e você estará pronto para começar a usar o WSL!
+    As etapas de instalação manual para WSL estão listadas abaixo e podem ser usadas para instalar o Linux em qualquer versão do Windows 10.
 
-Isso instalará a distribuição do Ubuntu. Você também pode instalar outras distribuições aprovando argumentos, por exemplo: `wsl --install -d Debian` instalará o Debian. A execução de `wsl --list --online` mostrará uma lista de distribuições disponíveis. 
+## <a name="simplified-installation-for-windows-insiders"></a>Instalação simplificada para Participantes do Programa Windows Insider
+
+O processo de instalação do Subsistema do Windows para Linux foi bastante aprimorado nas versões prévias mais recentes de Participantes do Programa Windows Insider do Windows 10, substituindo as etapas manuais abaixo por um único comando.
+
+Para usar o comando de instalação simplificada de `wsl --install`, você precisa:
+
+- Inscrever-se no [Programa Windows Insider](https://insider.windows.com/getting-started)
+- Instalar uma versão prévia do Windows 10 (build do sistema operacional 20262 ou superior).
+- Abra uma janela de linha de comando com privilégios de Administrador
+
+Assim que esses requisitos forem atendidos, para instalar o WSL:
+
+- Insira este comando na linha de comando que você abriu no modo Admin: `wsl.exe --install`
+- Reinicie o computador
+
+Na primeira vez que você iniciar uma distribuição do Linux recém-instalada, uma janela de console será aberta e será solicitado que você aguarde para que os arquivos sejam descompactados e armazenados em seu PC. Todas as futuras inicializações deverão levar menos de um segundo.
+
+Em seguida, você precisará [criar uma conta de usuário e uma senha para sua nova distribuição do Linux](./user-support.md).
+
+**PARABÉNS! Você instalou e configurou com êxito uma distribuição do Linux totalmente integrada ao seu sistema operacional Windows.**
+
+O comando --install executa as seguintes ações:
+
+- Habilita os componentes opcionais WSL e Plataforma de Máquina Virtual
+- Baixa e instala o kernel do Linux mais recente
+- Define WSL 2 como o padrão
+- Faz download e instala uma distribuição do Linux *(talvez seja necessário fazer a reinicialização)*
+
+Por padrão, a distribuição do Linux instalada será o Ubuntu. Isso pode ser alterado usando `wsl --install -d <Distribution Name>`. *(Substituindo `<Distribution Name>` pelo nome da distribuição desejada.)* Outras distribuições do Linux poderão ser adicionadas ao computador após a instalação inicial usando o comando `wsl --install -d <Distribution Name>`.
+
+Para ver uma lista de distribuições do Linux disponíveis, insira `wsl --list --online`.
+
+## <a name="manual-installation-steps"></a>Etapas de instalação manual
+
+Se você não estiver em um build dos Participantes do Programa Windows Insider do Windows Insiders, os recursos necessários para WSL precisarão ser habilitados manualmente seguindo as etapas abaixo.
 
 ## <a name="step-1---enable-the-windows-subsystem-for-linux"></a>Etapa 1 – Habilitar o Subsistema do Windows para Linux
 
@@ -74,10 +102,10 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 ## <a name="step-4---download-the-linux-kernel-update-package"></a>Etapa 4 – Baixar o pacote de atualização do kernel do Linux
 
 1. Baixar o pacote mais recente:
-    - [Pacote de atualização do kernel do Linux do WSL2 para computadores x64](http://aka.ms/wsl2kernelmsix64)
+    - [Pacote de atualização do kernel do Linux do WSL2 para computadores x64](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 
     > [!NOTE]
-    > Se estiver usando um computador ARM64, baixe o [pacote ARM64](http://aka.ms/wsl2kernelmsiarm64). Se você não tiver certeza do tipo do seu computador, abra o Prompt de Comando ou o PowerShell e insira: `systeminfo | find "System Type"`.
+    > Se estiver usando um computador ARM64, baixe o [pacote ARM64](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi). Se você não tiver certeza do tipo do seu computador, abra o Prompt de Comando ou o PowerShell e insira: `systeminfo | find "System Type"`.
 
 2. Execute o pacote de atualização baixado na etapa anterior. (Clique duas vezes para executar. Você receberá uma solicitação para fornecer permissões elevadas; selecione 'sim' para aprovar essa instalação.)
 
@@ -125,8 +153,6 @@ wsl --set-default-version 2
 2. Na página da distribuição, selecione "Obter".
 
     ![Distribuições do Linux na Microsoft Store](media/UbuntuStore.png)
-
-## <a name="step-7---set-up-a-new-distribution"></a>Etapa 7 – Configurar uma nova distribuição
 
 Na primeira vez que você iniciar uma distribuição do Linux recém-instalada, uma janela de console será aberta e será solicitado que você aguarde um ou dois minutos para que os arquivos sejam descompactados e armazenados em seu PC. Todas as futuras inicializações deverão levar menos de um segundo.
 
