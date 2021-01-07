@@ -6,12 +6,12 @@ ms.date: 09/28/2020
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: ff2c9bc08b4fdfe8862f7d65fc5861fa242efef7
-ms.sourcegitcommit: c92245ab2b763d6a357210a9b4470a0cafd786a6
+ms.openlocfilehash: 2de208a42d557aa3eca86aae2a86200611ce48bc
+ms.sourcegitcommit: f5b14630947ee9cf3438e9ba502bfbe85ed72cd1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96857593"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97957677"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Comparação entre o WSL 1 e o WSL 2
 
@@ -65,8 +65,8 @@ O WSL 2 só está disponível no Windows 10, versão 1903, Build 18362 ou superi
 
 O WSL 2 é uma importante revisão da arquitetura subjacente e usa a tecnologia de virtualização e um kernel do Linux para habilitar os novos recursos. As metas principais dessa atualização são aumentar o desempenho do sistema de arquivos e adicionar compatibilidade total com chamadas do sistema.
 
-- [Requisitos de sistema do WSL 2](./install-win10.md#step-2---update-to-wsl-2)
-- [Atualizar do WSL 1 para o WSL 2](./install-win10.md#step-2---update-to-wsl-2)
+- [Requisitos de sistema do WSL 2](./install-win10.md#step-2--check-requirements-for-running-wsl-2)
+- [Atualizar do WSL 1 para o WSL 2](./install-win10.md#set-your-distribution-version-to-wsl-1-or-wsl-2)
 - [Perguntas frequentes sobre o WSL 2](./wsl2-faq.md)
 
 ### <a name="wsl-2-architecture"></a>Arquitetura do WSL 2
