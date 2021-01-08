@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux
 ms.topic: article
 ms.date: 09/15/2020
 ms.localizationpriority: high
-ms.openlocfilehash: 6bfa3a67418e2b5c164f3506d0ee9180df828377
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: 1a0e5ec95105af75470ca68b9fa3bad43f6c669c
+ms.sourcegitcommit: f5b14630947ee9cf3438e9ba502bfbe85ed72cd1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413197"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97957667"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Documentação do Subsistema Windows para Linux
 
@@ -29,7 +29,8 @@ O Subsistema do Windows para Linux permite que os desenvolvedores executem um am
 ## <a name="get-started"></a>Introdução
 
 * [Instalar o WSL1](install-win10.md)
-* [Atualizar para o WSL2](install-win10.md#step-2---update-to-wsl-2)
+* [Verificar os requisitos para o WSL2](./install-win10.md#step-2--check-requirements-for-running-wsl-2)
+* [Atualizar do WSL 1 para o WSL 2](./install-win10.md#set-your-distribution-version-to-wsl-1-or-wsl-2)
 * [Instalar o Linux no Windows Server](install-on-server.md)
 * [Criar uma conta de usuário e uma senha para sua nova distribuição do Linux](user-support.md)
 
