@@ -6,14 +6,22 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: c772185501b009369d7d47752dc792b8f90b482d
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: c158cffde1c6f680f833b9f7e84f2d494ba64b78
+ms.sourcegitcommit: e2d586925b314ce4517773b9c78736450a9f75d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211740"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977121"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas sobre a versão do subsistema Windows para Linux
+
+## <a name="build-21286"></a>Build 21286
+Para obter informações gerais do Windows sobre o build 21286, visite o [blog do Windows](https://blogs.windows.com/windows-insider/2021/01/06/announcing-windows-10-insider-preview-build-21286/).
+
+* Adição de uma opção boot.command a /etc/wsl.conf para habilitar os comandos de inicialização.
+* Introdução do comando wsl.exe --cd para definir o diretório de trabalho atual de um comando.
+* Aprimoramento do mapeamento de NTSTATUS para códigos de erro do Linux. [GH 6063]
+* Aprimoramento do relatório de erros de wsl.exe --mount.
 
 ## <a name="build-20226"></a>Build 20226
 Para obter informações gerais do Windows sobre o build 20226, visite o [blog do Windows](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20226/).
