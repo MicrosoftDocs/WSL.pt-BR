@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, window
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: cbfd1f1aab99bc1965e569c4e818bd1663aa2878
-ms.sourcegitcommit: f5b14630947ee9cf3438e9ba502bfbe85ed72cd1
+ms.openlocfilehash: 3c7506f8f0144b11d4e91be3bf0667e6a28d7205
+ms.sourcegitcommit: e413f079790509b9c5e73efc189de186df350322
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97957687"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692107"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guia de instalação do Subsistema Windows para Linux para Windows 10
 
@@ -87,7 +87,7 @@ Para verificar a sua versão e o número de build, selecione a **tecla do logoti
 
 ## <a name="step-3---enable-virtual-machine-feature"></a>Etapa 3 – Habilitar o recurso de Máquina Virtual
 
-Antes de instalar o WSL 2, você precisa habilitar o recurso opcional **Plataforma de Máquina Virtual**.
+Antes de instalar o WSL 2, você precisa habilitar o recurso opcional **Plataforma de Máquina Virtual**. Seu computador exigirá [funcionalidades de virtualização](https://docs.microsoft.com/windows/wsl/troubleshooting#error-0x80370102-the-virtual-machine-could-not-be-started-because-a-required-feature-is-not-installed) para usar esse recurso.
 
 Abra o PowerShell como administrador e execute:
 

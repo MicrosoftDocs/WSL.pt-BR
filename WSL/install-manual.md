@@ -5,12 +5,12 @@ keywords: wsl, subsistema do Windows para Linux, instalação manual, instalar m
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b94c7eb2f9e70a79f47853dac44badde58667315
-ms.sourcegitcommit: f5b14630947ee9cf3438e9ba502bfbe85ed72cd1
+ms.openlocfilehash: 8f6cb0714d5a688f40690ba68b58b642bab765c2
+ms.sourcegitcommit: fe75d8d799434fb4ff05532baa7906cd6b625bda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97957657"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811325"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Baixar manualmente os pacotes de distribuição do Subsistema do Windows para Linux
 
@@ -69,6 +69,6 @@ Se você estiver usando o Windows 10, poderá instalar a distribuição com o Po
 Add-AppxPackage .\app_name.appx
 ```
 
-Se você estiver usando um servidor do Windows, poderá encontrar as instruções de instalação na página de documentação do [Windows Server](install-on-server.md).
+Caso esteja usando o Windows Server ou tenha problemas ao executar o comando acima, será possível encontrar instruções de instalação alternativa na página de documentação do [Windows Server](install-on-server.md) para instalar o arquivo `.appx`, alterando-o para um arquivo zip.
 
 Após instalar sua distribuição, siga as instruções normais para * [Atualizar do WSL 1 para o WSL 2](./install-win10.md#set-your-distribution-version-to-wsl-1-or-wsl-2) ou [criar uma conta e senha de usuário](./user-support.md).
