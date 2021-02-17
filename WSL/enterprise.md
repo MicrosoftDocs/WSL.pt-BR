@@ -6,12 +6,12 @@ ms.date: 12/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: a210268fb460a793fec2047c6d6678f92869ea16
-ms.sourcegitcommit: 0523e6a2ca99f5f3b188d526afed3ce6ad7e3abb
+ms.openlocfilehash: 8c5e1c84767423a2d415709d184c9e96a5a3de47
+ms.sourcegitcommit: 17d5ea1fe571274c224202544f61035971d6e0e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766862"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100551012"
 ---
 # <a name="windows-subsystem-for-linux-for-enterprise"></a>Subsistema do Windows para Linux for Enterprise
 
@@ -53,7 +53,9 @@ No momento, o WSL oferece mecanismos de controle limitado para modificar a exper
 
 Esta é uma lista de recursos para os quais nós ainda não temos suporte, mas estamos investigando.
 
-### <a name="unsupported"></a>Sem suporte
+### <a name="currently-unsupported"></a>Não há suporte no momento
+
+Veja abaixo uma lista de recursos comumente solicitados que atualmente não têm suporte no WSL. Essas solicitações estão em nossa lista de pendências, e estamos investigando maneiras de adicioná-las. 
 
 * Sincronizar o usuário dentro do WSL com o usuário do Windows no computador host
 * Gerenciar atualizações e aplicar patch de pacotes e distribuições do Linux usando ferramentas do Windows
