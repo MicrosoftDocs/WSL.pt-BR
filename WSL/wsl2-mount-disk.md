@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, Bash, disco, ext4, FileSys
 ms.date: 11/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 165ae828b7fe83cae70a477d6143999da4265e3f
-ms.sourcegitcommit: 8b22f057a2f39c86bbede43fd65e8001c99548da
+ms.openlocfilehash: 8c6fb5e2a4996f5ec59ac72ac08fb9408e117321
+ms.sourcegitcommit: 17d5ea1fe571274c224202544f61035971d6e0e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870537"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100551003"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Introdução à montagem de um disco do Linux no WSL 2 (visualização)
 
@@ -172,7 +172,7 @@ Se `Diskpath` for omitido, todos os discos anexados serão desmontados e desanex
 
 ## <a name="mount-a-vhd-in-wsl"></a>Montar um VHD no WSL
 
-Você também pode montar arquivos de disco rígido virtual (VHD) em WSL usando `wsl --mount` . Para fazer isso, primeiro você precisa montar o VHD no Windows usando o [`Mount-VHD`](https://docs.microsoft.com/powershell/module/hyper-v/mount-vhd) comando no Windows. Certifique-se de executar esse comando em uma janela com privilégios de administrador. Abaixo está um exemplo em que usamos esse comando e também geramos o caminho do disco. Certifique-se de substituir `<pathToVHD>` pelo seu caminho VHD real. 
+Você também pode montar arquivos de disco rígido virtual (VHD) em WSL usando `wsl --mount` . Para fazer isso, primeiro você precisa montar o VHD no Windows usando o [`Mount-VHD`](/powershell/module/hyper-v/mount-vhd) comando no Windows. Certifique-se de executar esse comando em uma janela com privilégios de administrador. Abaixo está um exemplo em que usamos esse comando e também geramos o caminho do disco. Certifique-se de substituir `<pathToVHD>` pelo seu caminho VHD real. 
 
 ```powershell
 Write-Output "\\.\PhysicalDrive$((Mount-VHD -Path <pathToVHD> -PassThru | Get-Disk).Number)"
@@ -186,6 +186,6 @@ Você também pode usar essa técnica para montar e interagir com os discos ríg
 
 - Neste momento, somente discos inteiros podem ser anexados ao WSL 2, o que significa que não é possível anexar apenas uma partição. Concretamente, isso significa que não é possível usar o `wsl --mount` para ler uma partição no dispositivo de inicialização, pois esse dispositivo não pode ser desanexado do Windows.
 
-- As unidades flash USB não têm suporte no momento e não serão anexadas ao WSL 2. No entanto, os discos USB têm suporte.
+- As unidades flash USB e os cartões SD não têm suporte no momento e não serão anexados ao WSL 2. No entanto, os discos USB têm suporte.
 
 - Somente os sistemas de sistema com suporte nativo no kernel podem ser montados pelo `wsl --mount` . Isso significa que não é possível usar drivers de sistema de arquivos instalados (como NTFS-3G, por exemplo) chamando `wsl --mount` .
